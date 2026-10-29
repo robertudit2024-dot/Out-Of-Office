@@ -78,13 +78,3 @@ transform: rotate(15deg);
   transform: translateY(-3px);
   transition: 500ms ease;
 }
-
-
-
-
-/* dark mode */
-
-/* DARK MODE */
-.dark body { background: var(--ooo-negro); color: var(--ooo-blanco); }
-.dark body.contact-page { background: #003879; color: var(--ooo-blanco); }
-/* DARK MODE */

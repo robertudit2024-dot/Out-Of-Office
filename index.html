@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="OutOfOffice — viajes a medida para perderte un poco y volver con algo nuevo." />
-    <title>OutOfOffice — Sal de lo previsto.</title>
+    <title>OutOfOffice - Inicio</title>
+    <link rel="shortcut icon" href="imgs/FAVICON OOO.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
@@ -52,19 +53,18 @@
     </header>
     
 
-
+<main>
       <section id="home-hero" class="home-hero-section relative isolate flex min-h-[100svh] items-end overflow-hidden bg-negro text-blanco">
         <img class="home-hero-image w-full h-full object-cover object-center absolute inset-0" src="imgs/stefan-stefancik-0wMmxNB6Xzc-unsplash.jpg" alt="Imagen principal del viaje">
         <div class="home-hero-overlay bg-gradient-to-b from-black/90 via-black/15 to-black/70 absolute inset-0"></div>
         <div class="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20">
           <div class="max-w-4xl">
-            <p class="home-hero__eyebrow mb-6 text-naranja">Agencia de viajes independiente · Madrid</p>
             <h1 class="home-hero__title font-josefin text-[clamp(3.4rem,12vw,9.5rem)] font-bold leading-[.82] tracking-[-.08em]">Sal de lo<br /><em class="not-italic text-naranja">previsto.</em></h1>
             <div class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <p class="home-hero__description max-w-sm text-base leading-relaxed text-blanco/80 sm:text-lg">Viajes a medida para perderte un poco y volver con algo nuevo.</p>
               <a class="inline-flex min-w-[11rem] items-center justify-between gap-6 border border-transparent bg-naranja px-4 py-3 font-sans text-[0.74rem] font-semibold uppercase tracking-wider text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-xl" href="contacto.html">
               Planear mi viaje 
-              <span aria-hidden="true"><i class="fa-solid fa-arrow-down-right text-[0.9rem]" aria-hidden="true"></i></span>
+              <span aria-hidden="true"><i class="fa-solid fa-chevron-right text-[0.9rem]" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
@@ -115,11 +115,11 @@
       <div>
         <p class="section-eyebrow text-naranja">Selección OOO · 2026</p>
         <h2 class="mt-4 font-josefin text-4xl font-semibold leading-none tracking-[-.06em] sm:text-6xl">
-          Escapadas<br /><span class="text-naranja">destacadas</span>
+          Experiencias<br /><span class="text-naranja">destacadas</span>
         </h2>
       </div>
       <a class="text-link--dark max-w-xs text-sm leading-relaxed" href="destinos.html">
-        Ver todos los destinos <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        Ver todas las experiencias <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -128,7 +128,7 @@
 
       <!-- Tarjeta 1 -->
       <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_18px_55px_rgba(0,0,0,0.12)] transition-all duration-350 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:translate-y-0 md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
-        <img class="block aspect-[4/3] w-full object-cover object-center" src="AÑADE_AQUI_LA_URL_DE_LA_ESCAPADA_1" alt="Imagen de La costa sin nombre">
+        <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/uran-wang-5wDq-27_zKI-unsplash.jpg" alt="Imagen de La costa sin nombre">
         <div class="p-[1.15rem]">
           <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
             <span>01 / carretera</span>
@@ -179,7 +179,37 @@
 </section>
 
 
+  
+<section id="home-newsletter" class="home-newsletter-section bg-verde text-negro dark:!bg-[#A96F00] dark:!text-blanco">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.9fr_1.1fr] lg:items-end lg:px-12 lg:py-24">
+    <div>
+      <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2]">Club Triple O · boletín mensual</p>
+      <h2 class="mt-4 max-w-lg font-josefin text-4xl font-semibold leading-[.9] tracking-[-.06em] sm:text-6xl">
+        Entérate<br /><em class="not-italic text-amarillo">antes que el restooo.</em>
+      </h2>
+    </div>
     
+    <form id="newsletter-form" class="max-w-xl" novalidate>
+      <p class="mb-5 max-w-md text-sm leading-relaxed">Una vez al mes te enviaremos las pistas de las próximas escapadas antes de publicarlas.</p>
+      <label class="sr-only" for="email">Tu correo electrónico</label>
+      
+      <div class="flex flex-col gap-2 sm:flex-row">
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="ejemplo@email.com" required class="w-full min-h-[3rem] border border-black/50 rounded-none bg-transparent px-[0.9rem] py-[0.75rem] outline-none font-sans text-[0.78rem] text-negro placeholder:text-black/60 focus:border-negro focus:ring-2 focus:ring-black/12 dark:border-white/50 dark:text-blanco dark:placeholder:text-white/65 dark:focus:border-white dark:focus:ring-white/20" />
+        
+        <button class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-negro text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)] dark:bg-blanco dark:text-negro" type="submit">
+          Entrar en el club OOO
+          <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square text-[0.9rem] leading-none" aria-hidden="true"></i>
+        </button>
+      </div>
+      
+      <p id="form-message" class="mt-3 hidden min-h-[1.4rem] text-[0.78rem] font-semibold" role="status"></p>
+    </form>
+  </div>
+</section>
+    
+        </main>
+
+
     
     <footer class="global-footer bg-azul text-blanco dark:!bg-[#003879] dark:text-blanco">
     <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
