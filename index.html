@@ -29,11 +29,159 @@
   </head>
     <body class="bg-blanco text-negro font-inter transition-colors duration-500 dark:bg-negro dark:text-blanco">
     
+    <header id="global-header" class="global-header--home absolute inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco">
+      <div class="global-header__inner mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
+        <a class="brandmark--stacked font-josefin text-lg font-bold leading-[.8] tracking-[-.08em]" href="index.html" aria-label="Out Of Office, inicio">Out<br />Of<br />Office</a>
+        <nav class="global-navigation hidden items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
+          <a class="global-navigation__link" href="index.html">Inicio</a>
+          <a class="global-navigation__link" href="destinos.html">Destinos</a>
+          <a class="global-navigation__link" href="nosotros.html">Nosotros</a>
+          <a class="global-navigation__link" href="experiencias.html">Experiencias</a>
+          <a class="global-navigation__link" href="contacto.html">Contacto</a>
+        </nav>
+        <div class="global-header__actions flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-button" type="button" aria-label="Cambiar a modo oscuro"><i class="ooo-icon-theme fa-solid fa-sun" aria-hidden="true"></i></button>
+          <button id="menu-toggle" class="mobile-menu-button relative z-50 lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Abrir menú">
+          <i class="ooo-icon-menu mobile-menu-button__glyph fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-navigation" class=" mobile-navigation mobile-navigation--fullscreen border-t border-blanco/30 px-5 py-5 lg:hidden" aria-label="Navegación móvil" hidden>
+        <a href="index.html">Inicio</a><a href="destinos.html">Destinos</a><a href="nosotros.html">Nosotros</a><a href="experiencias.html">Experiencias</a><a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    
+
+
+      <section id="home-hero" class="home-hero-section relative isolate flex min-h-[100svh] items-end overflow-hidden bg-negro text-blanco">
+        <img class="home-hero-image w-full h-full object-cover object-center absolute inset-0" src="imgs/stefan-stefancik-0wMmxNB6Xzc-unsplash.jpg" alt="Imagen principal del viaje">
+        <div class="home-hero-overlay bg-gradient-to-b from-black/90 via-black/15 to-black/70 absolute inset-0"></div>
+        <div class="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20">
+          <div class="max-w-4xl">
+            <p class="home-hero__eyebrow mb-6 text-naranja">Agencia de viajes independiente · Madrid</p>
+            <h1 class="home-hero__title font-josefin text-[clamp(3.4rem,12vw,9.5rem)] font-bold leading-[.82] tracking-[-.08em]">Sal de lo<br /><em class="not-italic text-naranja">previsto.</em></h1>
+            <div class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <p class="home-hero__description max-w-sm text-base leading-relaxed text-blanco/80 sm:text-lg">Viajes a medida para perderte un poco y volver con algo nuevo.</p>
+              <a class="inline-flex min-w-[11rem] items-center justify-between gap-6 border border-transparent bg-naranja px-4 py-3 font-sans text-[0.74rem] font-semibold uppercase tracking-wider text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-xl" href="contacto.html">
+              Planear mi viaje 
+              <span aria-hidden="true"><i class="fa-solid fa-arrow-down-right text-[0.9rem]" aria-hidden="true"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="home-philosophy" class="home-philosophy-section bg-amarillo text-blanco dark:!bg-[#005332]">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.75fr_1.25fr] lg:px-12 lg:py-28">
+    <div>
+      <p class="section-eyebrow text-naranja">Modo OOO</p>
+      <h2 class="home-philosophy__title mt-4 max-w-xs font-josefin text-4xl font-semibold leading-[.95] tracking-[-.06em] sm:text-6xl">Nuestra<br />filosofía</h2>
+    </div>
+    
+     <div class="philosophy-list grid gap-0 border-t border-blanco/30">
+
+  <!-- 01 -->
+  <article class="grid grid-cols-[2.3rem_minmax(5rem,.55fr)_1fr] items-start gap-2 border-b border-white/30 py-5 sm:grid-cols-[3rem_minmax(7rem,.55fr)_1fr] sm:gap-4 sm:py-[1.4rem]">
+    <span class="font-sans text-[0.7rem] font-medium text-naranja">01</span>
+    <h3 class="font-josefin text-[1.1rem] font-semibold tracking-[-.04em]">Original</h3>
+    <p class="max-w-[17rem] text-[0.85rem] leading-[1.45] text-white/80">Experiencias reales creadas a mano, sin circuitos masivos.</p>
+  </article>
+
+  <!-- 02 -->
+  <article class="grid grid-cols-[2.3rem_minmax(5rem,.55fr)_1fr] items-start gap-2 border-b border-white/30 py-5 sm:grid-cols-[3rem_minmax(7rem,.55fr)_1fr] sm:gap-4 sm:py-[1.4rem]">
+    <span class="font-sans text-[0.7rem] font-medium text-naranja">02</span>
+    <h3 class="font-josefin text-[1.1rem] font-semibold tracking-[-.04em]">Origen</h3>
+    <p class="max-w-[17rem] text-[0.85rem] leading-[1.45] text-white/80">Salir del punto de partida sin perder la esencia.</p>
+  </article>
+
+  <!-- 03 -->
+  <article class="grid grid-cols-[2.3rem_minmax(5rem,.55fr)_1fr] items-start gap-2 border-b border-white/30 py-5 sm:grid-cols-[3rem_minmax(7rem,.55fr)_1fr] sm:gap-4 sm:py-[1.4rem]">
+    <span class="font-sans text-[0.7rem] font-medium text-naranja">03</span>
+    <h3 class="font-josefin text-[1.1rem] font-semibold tracking-[-.04em]">Objetivo</h3>
+    <p class="max-w-[17rem] text-[0.85rem] leading-[1.45] text-white/80">Hacer del mundo tu próximo destino sin filtros.</p>
+  </article>
+</div>
+  </div>
+</section>
+
+
+
+      <section id="home-destinations" class="home-destinations-section bg-blanco text-negro dark:bg-negro dark:text-blanco">
+  <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+    
+    <!-- Cabecera de la sección -->
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="section-eyebrow text-naranja">Selección OOO · 2026</p>
+        <h2 class="mt-4 font-josefin text-4xl font-semibold leading-none tracking-[-.06em] sm:text-6xl">
+          Escapadas<br /><span class="text-naranja">destacadas</span>
+        </h2>
+      </div>
+      <a class="text-link--dark max-w-xs text-sm leading-relaxed" href="destinos.html">
+        Ver todos los destinos <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- Grid de Tarjetas -->
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+
+      <!-- Tarjeta 1 -->
+      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_18px_55px_rgba(0,0,0,0.12)] transition-all duration-350 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:translate-y-0 md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+        <img class="block aspect-[4/3] w-full object-cover object-center" src="AÑADE_AQUI_LA_URL_DE_LA_ESCAPADA_1" alt="Imagen de La costa sin nombre">
+        <div class="p-[1.15rem]">
+          <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
+            <span>01 / carretera</span>
+            <span>5 días</span>
+          </div>
+          <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">La costa sin nombre</h3>
+          <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Asturias · en coche</p>
+          <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] hover:text-naranja" href="experiencia.html">
+            Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2 -->
+      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_18px_55px_rgba(0,0,0,0.12)] transition-all duration-350 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco">
+        <img class="block aspect-[4/3] w-full object-cover object-center" src="AÑADE_AQUI_LA_URL_DE_LA_ESCAPADA_2" alt="Imagen de Donde acaba el mapa">
+        <div class="p-[1.15rem]">
+          <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
+            <span>02 / pausa</span>
+            <span>4 días</span>
+          </div>
+          <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Donde acaba el mapa</h3>
+          <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Alentejo · viaje lento</p>
+          <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] hover:text-naranja" href="experiencia.html">
+            Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Tarjeta 3 -->
+      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_18px_55px_rgba(0,0,0,0.12)] transition-all duration-350 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+        <img class="block aspect-[4/3] w-full object-cover object-center" src="AÑADE_AQUI_LA_URL_DE_LA_ESCAPADA_3" alt="Imagen de Mirar al norte">
+        <div class="p-[1.15rem]">
+          <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
+            <span>03 / horizonte</span>
+            <span>7 días</span>
+          </div>
+          <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Mirar al norte</h3>
+          <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Islandia · sin prisa</p>
+          <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] hover:text-naranja" href="experiencia.html">
+            Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
     
     
-    
-    
-    <footer class="global-footer bg-azul text-blanco">
+    <footer class="global-footer bg-azul text-blanco dark:!bg-[#003879] dark:text-blanco">
     <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
     <div>
@@ -80,5 +228,8 @@
     </div>
     </div>
     </footer>
+
+    <script src="script.js"></script>
+
   </body>
 </html>
