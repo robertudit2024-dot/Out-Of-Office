@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OutOfOffice — viajes a medida para perderte un poco y volver con algo nuevo." />
+    <title>OutOfOffice - Inicio</title>
+    <link rel="shortcut icon" href="imgs/FAVICON OOO.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --color-verde: #017B48;
+        --color-naranja: #EA3303;
+        --color-amarillo: #FAA800;
+        --color-azul: #0153B5;
+        --color-rosa: #CD76A1;
+        --color-negro: #000000;
+        --color-blanco: #FFFFFF;
+        --font-josefin: 'Josefin Sans', sans-serif;
+        --font-inter: 'Inter', sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+    <body class="bg-blanco text-negro font-inter transition-colors duration-500 dark:bg-negro dark:text-blanco">
+    
+    <header id="global-header" class="global-header--home absolute inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco">
+      <div class="global-header__inner mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
+        <a class="brandmark--stacked font-josefin text-lg font-bold leading-[.8] tracking-[-.08em] text-negro" href="index.html" aria-label="Out Of Office, inicio">Out<br />Of<br />Office</a>
+        <nav class="global-navigation hidden items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
+          <a class="global-navigation__link text-negro" href="index.html">Inicio</a>
+          <a class="global-navigation__link text-negro" href="destinos.html">Destinos</a>
+          <a class="global-navigation__link text-negro" href="nosotros.html">Nosotros</a>
+          <a class="global-navigation__link text-negro" href="experiencias.html">Experiencias</a>
+          <a class="global-navigation__link text-negro" href="contacto.html">Contacto</a>
+        </nav>
+
+    
+        <div class="global-header__actions flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-button" type="button" aria-label="Cambiar a modo oscuro"><i class="ooo-icon-theme fa-solid fa-sun" aria-hidden="true"></i></button> 
+          <button id="menu-toggle" class="mobile-menu-button relative z-50 lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Abrir menú">
+          <i class="ooo-icon-menu mobile-menu-button__glyph fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-navigation" class=" mobile-navigation mobile-navigation--fullscreen border-t border-blanco/30 px-5 py-5 lg:hidden" aria-label="Navegación móvil" hidden>
+        <a href="index.html">Inicio</a><a href="destinos.html">Destinos</a><a href="nosotros.html">Nosotros</a><a href="experiencias.html">Experiencias</a><a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    
+
+
+    <main>
+  <!-- Cita Principal -->
+  <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+    <blockquote class="mt-8 max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em] text-center">“Un buen viaje no se mide por los kilómetros recorridos, sino por la forma en que vuelves a mirar lo cotidiano.”</blockquote>
+    <p class="mt-8 text-sm text-negro dark:text-naranja">Clara Martín · CEO y fundadora de OutOfOffice</p>
+  </section>
+
+  <!-- La Historia -->
+  <section class="bg-amarillo text-negro px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#A96F00] dark:!text-blanco">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
+      <div>
+        <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-naranja dark:text-blanco">La historia</p>
+        <h1 class="mt-4 max-w-xl font-josefin text-5xl font-bold leading-[.9] tracking-[-.06em] sm:text-7xl">Otra manera<br />de preparar<br />una escapada.</h1>
+      </div>
+      <p class="max-w-xl self-end text-lg leading-relaxed">OutOfOffice nació de una idea sencilla: viajar no debería consistir en repetir el mismo itinerario que todo el mundo. Empezamos buscando otra manera de preparar una escapada; una que dejara espacio para el azar, para las conversaciones largas y para los lugares que no aparecen en las primeras búsquedas.</p>
+    </div>
+  </section>
+
+  <!-- El Secreto -->
+  <section class="bg-azul text-blanco px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#003879] dark:!text-blanco">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
+      <div>
+        <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-amarillo">El secreto</p>
+        <h2 class="mt-4 font-josefin text-5xl font-bold leading-[.9] tracking-[-.06em] sm:text-7xl">Escuchar<br />antes de<br /><span class="text-amarillo">recomendar.</span></h2>
+      </div>
+      <p class="max-w-[32rem] self-end text-lg leading-relaxed">Nuestro secreto es escuchar antes de recomendar. Cada viaje empieza con una conversación y termina en una ruta diseñada alrededor de la persona, no de una plantilla. Por eso elegimos menos lugares, pero los elegimos mejor.</p>
+    </div>
+  </section>
+
+  <!-- Nuestros Principios -->
+  <section class="bg-blanco text-negro px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-negro dark:!text-blanco">
+    <div class="mx-auto max-w-7xl">
+      <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-naranja">Nuestros principios</p>
+      <div class="mt-10 grid gap-0 border-t border-black/30 dark:border-white/30 md:grid-cols-3">
+        <article class="grid gap-4 border-b border-black/30 dark:border-white/30 py-6 md:py-8">
+          <span class="text-naranja font-semibold text-[0.72rem]">01</span>
+          <h2 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Original</h2>
+          <p class="max-w-[18rem] text-[0.86rem] leading-relaxed opacity-80">Experiencias reales creadas a mano, sin circuitos masivos.</p>
+        </article>
+        <article class="grid gap-4 border-b border-black/30 dark:border-white/30 py-6 md:py-8">
+          <span class="text-naranja font-semibold text-[0.72rem]">02</span>
+          <h2 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Origen</h2>
+          <p class="max-w-[18rem] text-[0.86rem] leading-relaxed opacity-80">Salir del punto de partida sin perder la esencia.</p>
+        </article>
+        <article class="grid gap-4 border-b border-black/30 dark:border-white/30 py-6 md:py-8">
+          <span class="text-naranja font-semibold text-[0.72rem]">03</span>
+          <h2 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Objetivo</h2>
+          <p class="max-w-[18rem] text-[0.86rem] leading-relaxed opacity-80">Hacer del mundo tu próximo destino sin filtros.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+    
+    <footer class="global-footer bg-azul text-blanco dark:!bg-[#003879] dark:text-blanco">
+    <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
+    <div>
+      <a href="index.html" class="brandmark--inline font-josefin text-4xl font-bold leading-none tracking-[-.08em]">Out Of Office</a>
+      <p class="max-w-xs text-sm">de la oficina al mundo.</p>
+    </div>
+    <nav class="footer-navigation flex flex-col gap-4 text-sm font-semibold" aria-label="Navegación del pie de página">
+      <a href="index.html">Inicio</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="experiencias.html">Experiencias</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <address class="footer-contact not-italic text-sm leading-7">
+      <p><a href="https://maps.google.com/?q=Calle+del+Clavel+5+Centro+28004+Madrid" target="_blank" class="hover:text-amarillo transition-colors underline">Calle del Clavel, 5, Centro, 28004 Madrid</a>
+      </p>
+      <p><a href="tel:+34612345678" class="hover:text-amarillo transition-colors underline">
+      +34 612 34 56 78
+    </a>
+    </p>
+      <p><a href="mailto:hola@outofoffice.es" class="hover:text-amarillo transition-colors underline">
+      hola@outofoffice.es
+    </a></p>
+    </address>
+    </div>
+    
+    <div class="mt-16 flex flex-col gap-6 border-t border-blanco/30 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+      <div class="footer-socials flex gap-5 text-base">
+        <a  href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram hover:text-amarillo transition-colors" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok hover:text-amarillo transition-colors" aria-hidden="true"></i>
+          <span class="sr-only">TikTok</span>
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="X">
+          <i class="fa-brands fa-x-twitter hover:text-amarillo transition-colors" aria-hidden="true"></i>
+          <span class="sr-only">X</span>
+        </a>
+    </div>
+        <p>© 2026 Out Of Office. Todos los derechos reservados.</p>
+        <p>Legal · Privacidad · Cookies</p>
+    </div>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
