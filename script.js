@@ -63,7 +63,39 @@ const root = document.documentElement;
   }
 
 
+//MAILLLL
 
+document.addEventListener('DOMContentLoaded', () => {
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterMessage = document.getElementById('form-message');
+
+  if (newsletterForm && newsletterMessage) {
+    newsletterForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+      const formData = new FormData(newsletterForm);
+      const submittedEmail = formData.get('email');
+    
+      newsletterMessage.classList.remove('hidden');
+      
+      // Validar mail
+      if (!submittedEmail || !/^\S+@\S+\.\S+$/.test(submittedEmail)) {
+        newsletterMessage.textContent = 'Escribe un email válido para entrar al club.';
+        newsletterMessage.style.color = '#EA3303'; // ERROR
+        return;
+      }
+      
+      // CORRECTO
+      newsletterMessage.textContent = 'Listo. La próxima pista será para ti.';
+      newsletterMessage.style.color = '#002f1b';
+      
+      // Reset forms
+      newsletterForm.reset();
+    });
+  } else {
+    console.warn('No se encontró el formulario de newsletter o el contenedor del mensaje en el DOM.');
+  }
+});
 
 
 
