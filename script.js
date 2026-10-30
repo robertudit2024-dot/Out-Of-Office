@@ -34,9 +34,6 @@ const initOutOfOfficeUI = () => {
     }
 };
 
-
-
-
 //DARK LIGHT MODE
 const root = document.documentElement;
   const themeToggleButton = document.querySelector('#theme-toggle');
@@ -64,7 +61,6 @@ const root = document.documentElement;
 
 
 //MAILLLL
-
 document.addEventListener('DOMContentLoaded', () => {
   const newsletterForm = document.getElementById('newsletter-form');
   const newsletterMessage = document.getElementById('form-message');
@@ -85,17 +81,26 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       
-      // CORRECTO
+     
       newsletterMessage.textContent = 'Listo. La próxima pista será para ti.';
-      newsletterMessage.style.color = '#002f1b';
+      newsletterMessage.style.color = '#002f1b'; // CORRECTO
       
       // Reset forms
       newsletterForm.reset();
     });
   } else {
-    console.warn('No se encontró el formulario de newsletter o el contenedor del mensaje en el DOM.');
+    console.warn('No se encontró el formulario');
   }
 });
+
+
+
+
+
+
+
+
+
 
 
 
