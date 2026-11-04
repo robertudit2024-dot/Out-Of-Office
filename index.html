@@ -9,9 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
       @theme {
@@ -132,7 +135,7 @@
     <div class="mt-12 grid gap-5 md:grid-cols-3">
 
       <!-- Tarjeta 1 -->
-      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] transition-all duration-350 ease-[cubic-bezier(.2,1,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_25px_75px_rgba(0,0,0,0.2)] md:translate-y-0 md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+      <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-0 md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco" data-aos="fade-right">
         <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/asturias1.webp" alt="Imagen de La costa sin nombre">
         <div class="p-[1.15rem]">
           <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
@@ -148,7 +151,7 @@
       </article>
 
       <!-- Tarjeta 2 -->
-      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] transition-all duration-350 ease-[cubic-bezier(.2,1,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_25px_75px_rgba(0,0,0,0.2)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco">
+      <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco" data-aos="fade-up">
         <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/Malaga-camnitodelrey1.webp" alt="Imagen de Donde acaba el mapa">
         <div class="p-[1.15rem]">
           <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
@@ -164,7 +167,7 @@
       </article>
 
       <!-- Tarjeta 3 -->
-      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] transition-all duration-350 ease-[cubic-bezier(.2,1,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_25px_75px_rgba(0,0,0,0.2)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+      <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco" data-aos="fade-left">
         <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/granada1.webp" alt="Imagen de Mirar al norte">
         <div class="p-[1.15rem]">
           <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
@@ -263,6 +266,20 @@
     </div>
     </div>
     </footer>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+    </script>
+
 
     <script src="script.js"></script>
 
