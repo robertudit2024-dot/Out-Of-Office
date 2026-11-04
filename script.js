@@ -123,9 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// MENSAJE FORMULARIO ENVIADO
+const contactForm = document.getElementById('contacto-formulario');
+const contactMessage = document.getElementById('contact-form-message');
 
-
-
+if (contactForm && contactMessage) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    contactMessage.textContent = '¡Se ha enviado tu consulta con éxito!';
+    contactMessage.classList.add('text-amarillo', 'font-semibold');
+    
+    contactForm.reset();
+  });
+}
 
 
 
