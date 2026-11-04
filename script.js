@@ -209,8 +209,6 @@ if (contactForm && contactMessage) {
 
 
 
-
-
 //SIEMPRE AL FINAL
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initOutOfOfficeUI, { once: true });
