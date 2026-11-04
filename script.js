@@ -94,7 +94,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const globalHeader = document.getElementById('global-header');
 
+function updateHeaderBackground() {
+  const scrollPosition = window.scrollY || document.querySelector('main')?.scrollTop || 0;
+  
+  if (scrollPosition > 40) {
+    globalHeader.classList.add('bg-gradient-to-b', 'from-black/50', 'to-transparent', 'backdrop-blur-xs');
+  } else {
+    globalHeader.classList.remove('bg-gradient-to-b', 'from-black/50', 'to-transparent', 'backdrop-blur-xs');
+  }
+}
+
+window.addEventListener('scroll', updateHeaderBackground);
+document.querySelector('main')?.addEventListener('scroll', updateHeaderBackground);
 
 
 
