@@ -159,6 +159,34 @@ $(function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contacto-formulario');
+  const contactMessage = document.getElementById('contact-form-message');
+
+  if (contactForm && contactMessage) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Evita que se recargue la página automáticamente
+      
+      // Comprueba si falta algún campo obligatorio por rellenar
+      if (!contactForm.checkValidity()) {
+        contactMessage.textContent = 'Campos no completados';
+        contactMessage.style.color = '#EA3303'; // Color rojo/naranja de error
+        contactMessage.classList.add('font-semibold');
+        return; // Detiene el proceso aquí si hay errores
+      }
+      
+      // Si todo está correcto, muestra el mensaje de éxito
+      contactMessage.textContent = '¡Se ha enviado tu consulta con éxito!';
+      contactMessage.style.color = '#FAA800'; // Color amarillo de éxito
+      contactMessage.classList.add('font-semibold');
+      
+      // Limpia el formulario después de enviarlo correctamente
+      contactForm.reset();
+    });
+  }
+});
+
+
 
 // MENSAJE FORMULARIO ENVIADO
 const contactForm = document.getElementById('contacto-formulario');
