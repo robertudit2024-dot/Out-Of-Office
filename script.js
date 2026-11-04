@@ -59,47 +59,12 @@ const root = document.documentElement;
     });
   }
 
-
-//MAILLLL
-document.addEventListener('DOMContentLoaded', () => {
-  const newsletterForm = document.getElementById('newsletter-form');
-  const newsletterMessage = document.getElementById('form-message');
-
-  if (newsletterForm && newsletterMessage) {
-    newsletterForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      
-      const formData = new FormData(newsletterForm);
-      const submittedEmail = formData.get('email');
-    
-      newsletterMessage.classList.remove('hidden');
-      
-      // Validar mail
-      if (!submittedEmail || !/^\S+@\S+\.\S+$/.test(submittedEmail)) {
-        newsletterMessage.textContent = 'Escribe un email válido para entrar al club.';
-        newsletterMessage.style.color = '#EA3303'; // ERROR
-        return;
-      }
-      
-     
-      newsletterMessage.textContent = 'Listo. La próxima pista será para ti.';
-      newsletterMessage.style.color = '#002f1b'; // CORRECTO
-      
-      // Reset forms
-      newsletterForm.reset();
-    });
-  } else {
-    console.warn('No se encontró el formulario');
-  }
-});
-
-
 const globalHeader = document.getElementById('global-header');
 
 function updateHeaderBackground() {
   const scrollPosition = window.scrollY || document.querySelector('main')?.scrollTop || 0;
   
-  if (scrollPosition > 40) {
+  if (scrollPosition > 10) {
     globalHeader.classList.add('bg-gradient-to-b', 'from-black/50', 'to-transparent', 'backdrop-blur-xs');
   } else {
     globalHeader.classList.remove('bg-gradient-to-b', 'from-black/50', 'to-transparent', 'backdrop-blur-xs');
@@ -111,12 +76,39 @@ document.querySelector('main')?.addEventListener('scroll', updateHeaderBackgroun
 
 
 
+$(function () {
+  const newsletterForm = $('#newsletter-form');
+  const newsletterMessage = $('#form-message');
 
+  if (newsletterForm.length && newsletterMessage.length) {
+    newsletterForm.on('submit', function (event) {
+      event.preventDefault();
 
+      const inputEmail = $(this).find('input[name="email"]');
+      const submittedEmail = inputEmail.val().trim();
 
+      newsletterMessage.removeClass('hidden');
 
+      if (!submittedEmail || !/^\S+@\S+\.\S+$/.test(submittedEmail)) {
+        newsletterMessage
+          .text('Escribe un email válido para entrar al club.')
+          .css('color', '#000000');
 
+        return;
+      }
 
+      newsletterMessage
+        .text('Listo. La próxima pista será para ti.')
+        .css('color', '#ffffff');
+
+      this.reset();
+    });
+  } else {
+    console.warn(
+      'No se encontró #newsletter-form o #form-message'
+    );
+  }
+});
 
 
 //SIEMPRE AL FINAL
