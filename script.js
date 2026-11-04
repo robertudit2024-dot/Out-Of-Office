@@ -36,29 +36,77 @@ const initOutOfOfficeUI = () => {
 
 //DARK LIGHT MODE
 const root = document.documentElement;
-  const themeToggleButton = document.querySelector('#theme-toggle');
-  const themeIcon = document.querySelector('.ooo-icon-theme');
+const themeToggleButton = document.querySelector('#theme-toggle');
+const themeIcon = document.querySelector('.ooo-icon-theme');
 
-  const updateThemeUI = () => {
-    const isDark = root.classList.contains('dark');
-    if (themeToggleButton) {
-      themeToggleButton.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
-      themeToggleButton.setAttribute('aria-pressed', String(isDark));
-    }
-    if (themeIcon) {
-      themeIcon.classList.toggle('fa-sun', !isDark);
-      themeIcon.classList.toggle('fa-moon', isDark);
-    }
-  };
+function updateThemeUI() {
+  const isDark = root.classList.contains('dark');
 
   if (themeToggleButton) {
-    themeToggleButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      root.classList.toggle('dark');
-      updateThemeUI();
-    });
+    themeToggleButton.setAttribute(
+      'aria-label',
+      isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+    );
+
+    themeToggleButton.setAttribute(
+      'aria-pressed',
+      String(isDark)
+    );
   }
 
+  if (themeIcon) {
+    themeIcon.classList.toggle('fa-sun', !isDark);
+    themeIcon.classList.toggle('fa-moon', isDark);
+  }
+}
+// Actualiza las imágenes según el tema actual
+function updateThemeImages() {
+  const isDark = root.classList.contains('dark');
+
+  $('.ooo-theme-image').each(function () {
+    const imagePath = isDark
+      ? $(this).attr('data-dark-src')
+      : $(this).attr('data-light-src');
+
+    if (imagePath) {
+      $(this).attr('src', imagePath);
+    }
+  });
+}
+
+function applyTheme() {
+  const savedTheme = localStorage.getItem('ooo-theme');
+
+  root.classList.toggle('dark', savedTheme === 'dark');
+
+  updateThemeUI();
+  updateThemeImages();
+}
+
+if (themeToggleButton) {
+  themeToggleButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    root.classList.toggle('dark');
+
+    localStorage.setItem(
+      'ooo-theme',
+      root.classList.contains('dark') ? 'dark' : 'light'
+    );
+
+    updateThemeUI();
+    updateThemeImages();
+  });
+}
+
+applyTheme();
+
+
+//FIN MODOS COLOR
+
+
+
+// HEADER BACKGROUND
 const globalHeader = document.getElementById('global-header');
 
 function updateHeaderBackground() {
@@ -126,6 +174,7 @@ if (contactForm && contactMessage) {
     contactForm.reset();
   });
 }
+
 
 
 
