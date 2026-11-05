@@ -57,68 +57,90 @@
         <main class="h-svh snap-y snap-mandatory overflow-y-auto"> 
   
         <!-- Escapada1: Asturias -->
-        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-between p-6 sm:p-10 lg:p-14">
-            <img class="absolute inset-0 -z-20 h-full w-full object-cover object-center" src="imgs/asturias1.webp" alt="Imagen de Asturias" />
+        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <img 
+                class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
+                src="imgs/asturias1.webp" 
+                data-light-src="imgs/asturias1.webp" 
+                data-dark-src="imgs/asturias_noche.webp" 
+                alt="Imagen de Asturias" 
+            />
             <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
 
-            <div class="relative z-10 min-h-full mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 lg:py-16 items-center w-full">
-                <div class="flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase self-start w-full lg:col-span-3">
-                    <span>01 / 05</span>
-                    <span>Asturias · 5 días</span>
-                </div>
-                  <h1 id="destino-asturias" class="self-center my-auto text-left font-josefin text-4xl font-bold leading-[.82] tracking-[-.08em] sm:text-6xl lg:text-7xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center lg:items-center lg:-mt-4">                      
-                      Desconecta en el norte
-                 </h1>
-
-                   <!-- BLOQUE DERECHO / CENTRAL EN DESKTOP -->
-                    <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start my-auto lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">                      
-                        <p>Descubre Asturias entre paisajes verdes, pueblos con encanto y rutas naturales. Una escapada para disfrutar con amigos, explorar la costa y desconectar rodeados de naturaleza.</p><div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20">
-
-                        <div class="text-center">
-
-                            <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
-                            <div class="text-[0.68rem] font-semibold text-white">5 días</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-location-dot text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Destino</div>
-                            <div class="text-[0.68rem] font-semibold text-white">Asturias</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-tree text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
-                            <div class="text-[0.68rem] font-semibold text-white">Escapada</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-users"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
-                            <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
-                        </div>
+                <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 items-center w-full pt-16">
+                    
+                    <!-- Numeración arriba -->
+                    <div class="absolute top-2 sm:top-6 inset-x-5 sm:inset-x-10 lg:inset-x-14 flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase lg:col-span-3">                    
+                        <span>01 / 05</span>
+                        <span>Asturias · 5 días</span>
                     </div>
+                    
+                    <!-- Título -->
+                    <h1 id="destino-asturias" class="text-left font-josefin text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl  text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center mt-8">                      
+                        Desconecta en el norte
+                    </h1>
 
-                        <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco mt-6 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
-                </div>
+                    <!-- Bloque de descripción, iconos y botón -->
+                    <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">                      
+                        <p>Descubre Asturias entre paisajes verdes, pueblos con encanto y rutas naturales. Una escapada para disfrutar con amigos, explorar la costa y desconectar rodeados de naturaleza.</p>
+                        
+                        <div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20 w-full">
+                            <div class="text-center">
+                                <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                                <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
+                                <div class="text-[0.68rem] font-semibold text-white">5 días</div>
+                            </div>
+                            <div class="text-center">
+                                <i class="fa-solid fa-location-dot text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                                <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Destino</div>
+                                <div class="text-[0.68rem] font-semibold text-white">Asturias</div>
+                            </div>
+                            <div class="text-center">
+                                <i class="fa-solid fa-tree text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                                <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
+                                <div class="text-[0.68rem] font-semibold text-white">Escapada</div>
+                            </div>
+                            <div class="text-center">
+                                <i class="fa-solid fa-users text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                                <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
+                                <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
+                            </div>
+                        </div>
+
+                        <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+                    </div>
             </div>
         </section>
 
-         <!-- Escapada2: Málaga -->
-        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-between p-6 sm:p-10 lg:p-14">
-            <img class="absolute inset-0 -z-20 h-full w-full object-cover object-center" src="imgs/malaga-caminoey2.webp" alt="Imagen de Málaga" />
+        <!-- Escapada2: Málaga -->
+        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <img 
+                class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
+                src="imgs/malaga-caminoey2.webp"
+                data-light-src="imgs/malaga-caminoey2.webp" 
+                data-dark-src="imgs/malaga_noche.webp" 
+                alt="Imagen de Málaga" 
+            />
             <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
 
-            <div class="relative z-10 min-h-full mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 lg:py-16 items-center w-full">
-                <div class="flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase self-start w-full lg:col-span-3">
+            <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 items-center w-full pt-16">
+                
+                <!-- Numeración arriba -->
+                <div class="absolute top-2 sm:top-6 inset-x-5 sm:inset-x-10 lg:inset-x-14 flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase lg:col-span-3">                    
                     <span>02 / 05</span>
                     <span>Málaga · 4 días</span>
                 </div>
-                  <h1 id="destino-malaga" class="self-center my-auto text-left font-josefin text-4xl font-bold leading-[.82] tracking-[-.08em] sm:text-6xl lg:text-7xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center lg:items-center lg:-mt-4">                      
-                      Aventura entre montañas
-                 </h1>
 
-                   <!-- BLOQUE DERECHO / CENTRAL EN DESKTOP -->
-                   <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
-                      <p>Descubre Málaga entre calles llenas de vida, lugares emblemáticos y playas. Una escapada para disfrutar con amigos, probar su gastronomía y descubrir la Costa del Sol.</p><div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20">
+                <!-- Título -->
+                <h1 id="destino-malaga" class="text-left font-josefin text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl  text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center mt-8">                      
+                    Ruta malagueña.
+                </h1>
+
+                <!-- Bloque central / derecho -->
+                <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
+                    <p>Descubre Málaga entre calles llenas de vida, lugares emblemáticos y playas. Una escapada para disfrutar con amigos, probar su gastronomía y descubrir la Costa del Sol.</p>
+                    
+                    <div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20 w-full">
                         <div class="text-center">
                             <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
@@ -135,34 +157,45 @@
                             <div class="text-[0.68rem] font-semibold text-white">Naturaleza</div>
                         </div>
                         <div class="text-center">
-                           <i class="fa-solid fa-users"></i>
+                            <i class="fa-solid fa-users text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
                             <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
                         </div>
                     </div>
 
-                        <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco mt-6 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+                    <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
-
         <!-- Escapada3: Granada -->
-        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-between p-6 sm:p-10 lg:p-14">
-            <img class="absolute inset-0 -z-20 h-full w-full object-cover object-center" src="imgs/granada2.webp" alt="Imagen de Granada" />
+        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+            <img 
+                class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
+                src="imgs/granada2.webp"
+                data-light-src="imgs/granada2.webp" 
+                data-dark-src="imgs/granada_noche.webp" 
+                alt="Imagen de Granada" 
+            />
             <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
 
-            <div class="relative z-10 min-h-full mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 lg:py-16 items-center w-full">
-               <div class="flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase self-start w-full lg:col-span-3">
+            <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 items-center w-full pt-16">
+                
+                <!-- Numeración arriba -->
+                <div class="absolute top-2 sm:top-6 inset-x-5 sm:inset-x-10 lg:inset-x-14 flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase lg:col-span-3">                    
                     <span>03 / 05</span>
                     <span>Granada · 3 días</span>
                 </div>
-                  <h1 id="destino-granada" class="self-center my-auto text-left font-josefin text-4xl font-bold leading-[.82] tracking-[-.08em] sm:text-6xl lg:text-7xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center lg:items-center lg:-mt-4">                      
-                      Pueblos que enamoran
-                  </h1>
 
-                   <!-- BLOQUE DERECHO / CENTRAL EN DESKTOP -->
-                   <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
-                      <p>Descubre Granada entre calles con encanto, monumentos históricos y rincones únicos. Una escapada para disfrutar con amigos, descubrir su gastronomía y compartir nuevas experiencias.</p><div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20">
+                <!-- Título (Cambiado a uno más corto como pediste) -->
+                <h1 id="destino-granada" class="text-left font-josefin text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl  text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center mt-8">                      
+                    Encanto andaluz.
+                </h1>
+
+                <!-- Bloque central / derecho -->
+                <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
+                    <p>Descubre Granada entre calles con encanto, monumentos históricos y rincones únicos. Una escapada para disfrutar con amigos, descubrir su gastronomía y compartir nuevas experiencias.</p>
+                    
+                    <div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20 w-full">
                         <div class="text-center">
                             <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
@@ -174,40 +207,51 @@
                             <div class="text-[0.68rem] font-semibold text-white">Granada</div>
                         </div>
                         <div class="text-center">
-                            <i class="fa-solid fa-landmark"></i>
+                            <i class="fa-solid fa-landmark text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
                             <div class="text-[0.68rem] font-semibold text-white">Cultura</div>
                         </div>
                         <div class="text-center">
-                            <i class="fa-solid fa-users"></i>
+                            <i class="fa-solid fa-users text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
                             <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
                         </div>
                     </div>
 
-                        <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco mt-6 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+                    <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- Escapada4: Girona -->
-        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-between p-6 sm:p-10 lg:p-14">
-            <img class="absolute inset-0 -z-20 h-full w-full object-cover object-center" src="imgs/girona1.webp" alt="Imagen de Granada" />
+        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+             <img 
+                class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
+                src="imgs/girona1.webp" 
+                data-light-src="imgs/girona1.webp" 
+                data-dark-src="imgs/girona_noche.webp" 
+                alt="Imagen de Girona" 
+            />
             <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
 
-            <div class="relative z-10 min-h-svh mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-28 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 lg:py-32 items-stretch w-full">
-
-                <div class="flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase self-start w-full lg:col-span-3">
+            <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 items-center w-full pt-16">
+                
+                <!-- Numeración arriba -->
+                <div class="absolute top-2 sm:top-6 inset-x-5 sm:inset-x-10 lg:inset-x-14 flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase lg:col-span-3">                    
                     <span>04 / 05</span>
                     <span>Girona · 4 días</span>
                 </div>
-                <h1 id="destino-girona" class="self-center my-auto text-left font-josefin text-4xl font-bold leading-[.82] tracking-[-.08em] sm:text-6xl lg:text-7xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center lg:items-center lg:-mt-4">                      
-                        Pierdete conmigo
-                  </h1>
 
-                   <!-- BLOQUE DERECHO / CENTRAL EN DESKTOP -->
-                   <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
-                      </p>Descubre la Costa Brava entre calles blancas, pequeñas calas y atardeceres junto al mar. Una escapada en pareja para desconectar, disfrutar y compartir momentos especiales.</p><div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20">
+                <!-- Título -->
+                <h1 id="destino-girona" class="text-left font-josefin text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl  text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center mt-8">                      
+                    Pierdete conmigo.
+                </h1>
+
+                <!-- Bloque central / derecho -->
+                <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
+                    <p>Descubre la Costa Brava entre calles blancas, pequeñas calas y atardeceres junto al mar. Una escapada en pareja para desconectar, disfrutar y compartir momentos especiales.</p>
+                    
+                    <div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20 w-full">
                         <div class="text-center">
                             <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
@@ -219,7 +263,7 @@
                             <div class="text-[0.68rem] font-semibold text-white">Cadaqués</div>
                         </div>
                         <div class="text-center">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-heart text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
                             <div class="text-[0.68rem] font-semibold text-white">Romántico</div>
                         </div>
@@ -230,28 +274,40 @@
                         </div>
                     </div>
 
-                        <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco mt-6 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+                    <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
 
-         <!-- Escapada5: Zaragoza -->
-        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-between p-6 sm:p-10 lg:p-14">
-            <img class="absolute inset-0 -z-20 h-full w-full object-cover object-center" src="imgs/zaragoza1.webp" alt="Imagen de Zaragoza" />
+        <!-- Escapada5: Zaragoza -->
+        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+             <img 
+                class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
+                src="imgs/zaragoza1.webp"
+                data-light-src="imgs/zaragoza1.webp" 
+                data-dark-src="imgs/zaragoza-noche.webp" 
+                alt="Imagen de zaragoza" 
+            />
             <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
 
-          <div class="relative z-10 min-h-full mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 lg:py-16 items-center w-full">
-            <div class="flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase self-start w-full lg:col-span-3">
-                <span>05 / 05</span>
-                <span>Zaragoza · 4 días</span>
-            </div>
-                  <h1 id="destino-zaragoza" class="self-center my-auto text-left font-josefin text-4xl font-bold leading-[.82] tracking-[-.08em] sm:text-6xl lg:text-7xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center lg:items-center lg:-mt-4">                      
-                     Ciudad por descubrir
-                  </h1>
+            <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 items-center w-full pt-16">
+                
+                <!-- Numeración arriba -->
+                <div class="absolute top-2 sm:top-6 inset-x-5 sm:inset-x-10 lg:inset-x-14 flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase lg:col-span-3">                    
+                    <span>05 / 05</span>
+                    <span>Zaragoza · 4 días</span>
+                </div>
 
-                   <!-- BLOQUE DERECHO / CENTRAL EN DESKTOP -->
-                   <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
-                      <p>Descubre Zaragoza entre calles con historia, rincones especiales y buena gastronomía. Una escapada para conocer la ciudad, compartir experiencias y salir de la rutina.</p><div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20">
+                <!-- Título -->
+                <h1 id="destino-zaragoza" class="text-left font-josefin text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center mt-8">                      
+                    Ciudad por descubrir
+                </h1>
+
+                <!-- Bloque central / derecho -->
+                <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
+                    <p>Descubre Zaragoza entre calles con historia, rincones especiales y buena gastronomía. Una escapada para conocer la ciudad, compartir experiencias y salir de la rutina.</p>
+                    
+                    <div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20 w-full">
                         <div class="text-center">
                             <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
@@ -263,70 +319,71 @@
                             <div class="text-[0.68rem] font-semibold text-white">Zaragoza</div>
                         </div>
                         <div class="text-center">
-                            <i class="fa-solid fa-city"></i>
+                            <i class="fa-solid fa-city text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
                             <div class="text-[0.68rem] font-semibold text-white">Urbano</div>
-                        </div> 
+                        </div>
                         <div class="text-center">
-                           <i class="fa-solid fa-users"></i>
+                            <i class="fa-solid fa-users text-white mb-1.5 text-sm" aria-hidden="true"></i>
                             <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
                             <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
                         </div>
                     </div>
 
-                        <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco mt-6 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+                    <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
 
-
+        
         <footer class="global-footer bg-azul text-blanco dark:!bg-[#003879] dark:text-blanco">
-        <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
-            <div>
-            <a href="index.html" class="brandmark--inline font-josefin text-4xl font-bold leading-none tracking-[-.08em]">Out Of Office</a>
-            <p class="max-w-xs text-sm">de la oficina al mundo.</p>
-        </div>
-            <nav class="footer-navigation flex flex-col gap-4 text-sm font-semibold" aria-label="Navegación del pie de página">
-            <a href="index.html">Inicio</a>
-            <a href="destinos.html">Destinos</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="experiencias.html">Experiencias</a>
-            <a href="contacto.html">Contacto</a>
-            </nav>
-            <address class="footer-contact not-italic text-sm leading-7">
-            <p><a href="https://maps.google.com/?q=Calle+del+Clavel+5+Centro+28004+Madrid" target="_blank" class="hover:text-amarillo transition-colors underline">Calle del Clavel, 5, Centro, 28004 Madrid</a>
-            </p>
-            <p><a href="tel:+34612345678" class="hover:text-amarillo transition-colors underline">
-            +34 612 34 56 78
-            </a>
-            </p>
-            <p><a href="mailto:hola@outofoffice.es" class="hover:text-amarillo transition-colors underline">
-            hola@outofoffice.es
-            </a></p>
-            </address>
-        </div>
-        
-        <div class="mt-16 flex flex-col gap-6 border-t border-blanco/30 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
-            <div class="footer-socials flex gap-5 text-base">
-                <a  href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                <i class="fa-brands fa-instagram hover:text-amarillo transition-colors" aria-hidden="true"></i>
-                <span class="sr-only">Instagram</span>
+            <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
+                <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
+                <div>
+                <a href="index.html" class="brandmark--inline font-josefin text-4xl font-bold leading-none tracking-[-.08em]">Out Of Office</a>
+                <p class="max-w-xs text-sm">de la oficina al mundo.</p>
+                </div>
+                <nav class="footer-navigation flex flex-col gap-4 text-sm font-semibold" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="experiencias.html">Experiencias</a>
+                <a href="contacto.html">Contacto</a>
+                </nav>
+                <address class="footer-contact not-italic text-sm leading-7">
+                <p><a href="https://maps.google.com/?q=Calle+del+Clavel+5+Centro+28004+Madrid" target="_blank" class="hover:text-amarillo transition-colors underline">Calle del Clavel, 5, Centro, 28004 Madrid</a>
+                </p>
+                <p><a href="tel:+34612345678" class="hover:text-amarillo transition-colors underline">
+                +34 612 34 56 78
                 </a>
-                <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok hover:text-amarillo transition-colors" aria-hidden="true"></i>
-                <span class="sr-only">TikTok</span>
-                </a>
-                <a href="https://twitter.com/" target="_blank" aria-label="X">
-                <i class="fa-brands fa-x-twitter hover:text-amarillo transition-colors" aria-hidden="true"></i>
-                <span class="sr-only">X</span>
-                </a>
+                </p>
+                <p><a href="mailto:hola@outofoffice.es" class="hover:text-amarillo transition-colors underline">
+                hola@outofoffice.es
+                </a></p>
+                </address>
             </div>
-                <p>© 2026 Out Of Office. Todos los derechos reservados.</p>
-                <p>Legal · Privacidad · Cookies</p>
+            
+            <div class="mt-16 flex flex-col gap-6 border-t border-blanco/30 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+                <div class="footer-socials flex gap-5 text-base">
+                    <a  href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram hover:text-amarillo transition-colors" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok hover:text-amarillo transition-colors" aria-hidden="true"></i>
+                    <span class="sr-only">TikTok</span>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" aria-label="X">
+                    <i class="fa-brands fa-x-twitter hover:text-amarillo transition-colors" aria-hidden="true"></i>
+                    <span class="sr-only">X</span>
+                    </a>
+                </div>
+                    <p>© 2026 Out Of Office. Todos los derechos reservados.</p>
+                    <p>Legal · Privacidad · Cookies</p>
+                </div>
             </div>
-        </div>
-        
+        </footer>
+
 
         <script src="script.js"></script> 
     </body> 
