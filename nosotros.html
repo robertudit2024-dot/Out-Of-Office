@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <style type="text/tailwindcss">
@@ -60,28 +60,28 @@
     <main>
   <!-- Cita Principal -->
     <section class="ooo-quote flex min-h-svh flex-col items-center justify-center bg-naranja px-5 py-20 text-center dark:bg-negro lg:px-12">
-  <blockquote class="max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em]">
+  <blockquote class="max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em] text-blanco">
     “Un buen viaje no se mide por los kilómetros recorridos, sino por la forma en que vuelves a mirar lo cotidiano.”
   </blockquote>
 
-  <p class="mt-8 text-sm text-negro dark:text-naranja">
+  <p class="mt-8 text-sm text-blanco dark:text-naranja">
     Clara Martín · CEO y fundadora de OutOfOffice
   </p>
 
 
 
   <a
-    class="ooo-scroll-indicator absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 text-negro dark:text-blanco"
+    class="ooo-scroll-indicator absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 text-blanco dark:text-blanco"
     href="#history"
   >
     <span class="text-[0.65rem] font-semibold uppercase tracking-[0.18em]">
       Descubre más
     </span>
 
-    <span class="ooo-scroll-arrows" aria-hidden="true">
-      <i class="fa-solid fa-chevron-down"></i>
-      <i class="fa-solid fa-chevron-down"></i>
-      <i class="fa-solid fa-chevron-down"></i>
+    <span class="ooo-scroll-arrows items-center gap-0.5" aria-hidden="true">
+    <i class="fa-solid fa-chevron-down" data-aos="zoom-in-down"></i>
+    <i class="fa-solid fa-chevron-down" data-aos="zoom-in-down"></i>
+    <i class="fa-solid fa-chevron-down" data-aos="zoom-in-down"></i>
     </span>
   </a>
 </section>
@@ -91,10 +91,10 @@
   <section id="history" class="bg-amarillo text-negro px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#A96F00] dark:!text-blanco">
     <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
       <div>
-        <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-naranja dark:text-blanco">La historia</p>
+        <p class="font-sans text-[0.66rem] font-bold uppercase tracking-[0.16em] leading-[1.2] text-naranja dark:text-blanco">La historia</p>
         <h1 class="mt-4 max-w-xl font-josefin text-5xl font-bold leading-[.9] tracking-[-.06em] sm:text-7xl">Otra manera<br />de preparar<br />una escapada.</h1>
       </div>
-      <p class="max-w-xl self-end text-lg leading-relaxed">OutOfOffice nació de una idea sencilla: viajar no debería consistir en repetir el mismo itinerario que todo el mundo. Empezamos buscando otra manera de preparar una escapada; una que dejara espacio para el azar, para las conversaciones largas y para los lugares que no aparecen en las primeras búsquedas.</p>
+      <p class="max-w-xl self-end text-lg leading-relaxed text-[0.95rem]">OutOfOffice nació de una idea sencilla: viajar no debería consistir en repetir el mismo itinerario que todo el mundo. Empezamos buscando otra manera de preparar una escapada; una que dejara espacio para el azar, para las conversaciones largas y para los lugares que no aparecen en las primeras búsquedas.</p>
     </div>
   </section>
 
@@ -102,33 +102,46 @@
   <section class="bg-azul text-blanco px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#003879] dark:!text-blanco">
     <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
       <div>
-        <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-amarillo">El secreto</p>
+        <p class="font-sans text-[0.66rem] font-bold uppercase tracking-[0.16em] leading-[1.2] text-amarillo">El secreto</p>
         <h2 class="mt-4 font-josefin text-5xl font-bold leading-[.9] tracking-[-.06em] sm:text-7xl">Escuchar<br />antes de<br /><span class="text-amarillo">recomendar.</span></h2>
       </div>
-      <p class="max-w-[32rem] self-end text-lg leading-relaxed">Nuestro secreto es escuchar antes de recomendar. Cada viaje empieza con una conversación y termina en una ruta diseñada alrededor de la persona, no de una plantilla. Por eso elegimos menos lugares, pero los elegimos mejor.</p>
+      <p class="max-w-[32rem] self-end text-lg leading-relaxed text-[0.95rem]">Nuestro secreto es escuchar antes de recomendar. Cada viaje empieza con una conversación y termina en una ruta diseñada alrededor de la persona, no de una plantilla. Por eso elegimos menos lugares, pero los elegimos mejor.</p>
     </div>
   </section>
 
   <!-- Nuestros Principios -->
   <section class="bg-blanco text-negro px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-negro dark:!text-blanco">
-    <div class="mx-auto max-w-7xl">
-      <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-naranja">Nuestros principios</p>
-      <div class="mt-10 grid gap-0 border-t border-black/30 dark:border-white/30 md:grid-cols-3">
-        <article class="grid gap-4 border-b border-black/30 dark:border-white/30 py-6 md:py-8">
+    <!-- max-w-md para móvil, max-w-7xl para ordenador -->
+    <div class="mx-auto max-w-md text-center md:max-w-7xl md:text-left">
+      
+      <!-- Título de la sección -->
+      <p class="font-sans text-[0.66rem] font-bold uppercase tracking-[0.16em] leading-[1.2] text-naranja">Nuestros principios</p>
+      
+      <!-- Contenedor: Columna en móvil (flex-col), Grid de 3 columnas en ordenador (md:grid md:grid-cols-3) -->
+      <div class="mt-10 flex flex-col border-t border-black/30 dark:border-white/30 md:grid md:grid-cols-3 md:gap-8">
+        
+        <article class="flex flex-col items-center gap-3 border-b border-black/30 dark:border-white/30 py-8 md:items-start md:py-6">
           <span class="text-naranja font-semibold text-[0.72rem]">01</span>
           <h2 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Original</h2>
-          <p class="max-w-[18rem] text-[0.86rem] leading-relaxed opacity-80">Experiencias reales creadas a mano, sin circuitos masivos.</p>
+          <p class="max-w-[18rem] text-[0.95rem] leading-relaxed opacity-80">Experiencias reales creadas a mano, sin circuitos masivos.</p>
         </article>
-        <article class="grid gap-4 border-b border-black/30 dark:border-white/30 py-6 md:py-8">
+
+        <article class="flex flex-col items-center gap-3 border-b border-black/30 dark:border-white/30 py-8 md:items-start md:py-6">
           <span class="text-naranja font-semibold text-[0.72rem]">02</span>
           <h2 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Origen</h2>
-          <p class="max-w-[18rem] text-[0.86rem] leading-relaxed opacity-80">Salir del punto de partida sin perder la esencia.</p>
+          <p class="max-w-[18rem] text-[0.95rem] leading-relaxed opacity-80">Salir del punto de partida sin perder la esencia.</p>
         </article>
-        <article class="grid gap-4 border-b border-black/30 dark:border-white/30 py-6 md:py-8">
+
+        <article class="flex flex-col items-center gap-3 border-b border-black/30 dark:border-white/30 py-8 md:items-start md:py-6">
           <span class="text-naranja font-semibold text-[0.72rem]">03</span>
           <h2 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Objetivo</h2>
-          <p class="max-w-[18rem] text-[0.86rem] leading-relaxed opacity-80">Hacer del mundo tu próximo destino sin filtros.</p>
+          <p class="max-w-[18rem] text-[0.95rem] leading-relaxed opacity-80">Hacer del mundo tu próximo destino sin filtros.</p>
         </article>
+
+      </div>
+    </div>
+  </section>
+
       </div>
     </div>
   </section>
@@ -185,6 +198,18 @@
     </div>
     </div>
     </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+    </script>
+
 
     <script src="script.js"></script>
 

@@ -241,6 +241,28 @@ if (contactForm && contactMessage) {
 
 
 
+// ANIMACIÓN DE MÁQUINA DE ESCRIBIR PARA NEWSLETTER
+$(function() {
+ 
+  if ($('#typed-newsletter').length) {
+    new Typed('#typed-newsletter', {
+      strings: [
+        'antes que el restooo.',
+        'de las mejores escapadas.',
+        'de chollos exclusivos.'
+      ],
+      typeSpeed: 60,
+      backSpeed: 35,
+      backDelay: 2000,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+  }
+});
+
+
 
 
 //SIEMPRE AL FINAL
