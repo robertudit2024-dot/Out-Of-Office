@@ -159,6 +159,42 @@ $(function () {
 });
 
 
+
+$(function () {
+  const newsletterForm = $('#newsletter-form');
+  const newsletterMessage = $('#form-message');
+
+  if (newsletterForm.length && newsletterMessage.length) {
+    newsletterForm.on('submit', function (event) {
+      event.preventDefault();
+
+      const inputEmail = $(this).find('input[name="email"]');
+      const submittedEmail = inputEmail.val().trim();
+
+      newsletterMessage.removeClass('hidden');
+
+      if (!submittedEmail || !/^\S+@\S+\.\S+$/.test(submittedEmail)) {
+        newsletterMessage
+          .text('Escribe un email válido para entrar al club.')
+          .css('color', '#000000');
+
+        return;
+      }
+
+      newsletterMessage
+        .text('Listo. La próxima pista será para ti.')
+        .css('color', '#ffffff');
+
+      this.reset();
+    });
+  } else {
+    console.warn(
+      'No se encontró #newsletter-form o #form-message'
+    );
+  }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contacto-formulario');
   const contactMessage = document.getElementById('contact-form-message');
@@ -202,8 +238,6 @@ if (contactForm && contactMessage) {
     contactForm.reset();
   });
 }
-
-
 
 
 
