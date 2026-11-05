@@ -279,63 +279,70 @@
             </div>
         </section>
 
+            
         <!-- Escapada5: Zaragoza -->
-        <section class="relative min-h-[100vh] h-svh overflow-hidden snap-start isolate flex flex-col justify-center p-6 sm:p-10 lg:p-14">
-             <img 
-                class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
-                src="imgs/zaragoza1.webp"
-                data-light-src="imgs/zaragoza1.webp" 
-                data-dark-src="imgs/zaragoza-noche.webp" 
-                alt="Imagen de zaragoza" 
-            />
-            <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
+    <section class="relative grid min-h-svh overflow-hidden snap-start isolate" aria-labelledby="destino-barcelona">
+        
+        <!-- Imagen dinámica (Día / Noche) -->
+        <img 
+            class="ooo-theme-image absolute inset-0 -z-20 h-full w-full object-cover object-center" 
+            src="imgs/zaragoza1.webp" 
+            data-light-src="imgs/zaragoza1.webp" 
+            data-dark-src="imgs/zaragoza-noche.webp" 
+            alt="Imagen de Zaragoza" 
+        />
 
-            <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 items-center w-full pt-16">
-                
-                <!-- Numeración arriba -->
-                <div class="absolute top-2 sm:top-6 inset-x-5 sm:inset-x-10 lg:inset-x-14 flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase lg:col-span-3">                    
+        <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_48%,rgba(0,0,0,.72)_100%),linear-gradient(0deg,rgba(0,0,0,.74),transparent_42%)]"></div>
+        
+        <div class="relative z-10 min-h-svh mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-28 sm:px-8 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-12 lg:py-32 items-stretch w-full">
+            
+            <!-- BLOQUE IZQUIERDO: Numeración arriba y Métricas/Iconos abajo del todo -->
+            <div class="flex flex-col justify-between w-full self-start lg:self-stretch lg:pb-50s">
+                <div class="flex justify-between gap-4 text-white/82 text-[0.72rem] font-medium tracking-[0.04em] uppercase w-full">
                     <span>05 / 05</span>
                     <span>Zaragoza · 4 días</span>
                 </div>
-
-                <!-- Título -->
-                <h1 id="destino-zaragoza" class="text-left font-josefin text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl text-white text-balance lg:col-start-2 lg:col-span-1 lg:text-center mt-8">                      
-                    Ciudad por descubrir
-                </h1>
-
-                <!-- Bloque central / derecho -->
-                <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-center lg:self-center lg:ml-0 lg:col-start-2 lg:col-span-1 lg:max-w-md lg:text-center lg:flex lg:flex-col lg:items-center">
-                    <p>Descubre Zaragoza entre calles con historia, rincones especiales y buena gastronomía. Una escapada para conocer la ciudad, compartir experiencias y salir de la rutina.</p>
-                    
-                    <div class="flex items-center justify-between gap-2 my-6 py-4 border-y border-white/20 w-full">
-                        <div class="text-center">
-                            <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
-                            <div class="text-[0.68rem] font-semibold text-white">4 días</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-location-dot text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Destino</div>
-                            <div class="text-[0.68rem] font-semibold text-white">Zaragoza</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-city text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
-                            <div class="text-[0.68rem] font-semibold text-white">Urbano</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-users text-white mb-1.5 text-sm" aria-hidden="true"></i>
-                            <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
-                            <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
-                        </div>
-                    </div>
-
-                    <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+                
+                <!-- Iconos y métricas abajo a la izquierda -->
+                    <div class="flex items-center justify-between gap-2 py-3 border-y border-white/20 w-full max-w-[16rem] lg:mt-auto">
+                <div class="text-center">
+                    <i class="fa-solid fa-calendar text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                    <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Duración</div>
+                    <div class="text-[0.68rem] font-semibold text-white">4 días</div>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-location-dot text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                    <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Destino</div>
+                    <div class="text-[0.68rem] font-semibold text-white">Zaragoza</div>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-city text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                    <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Plan</div>
+                    <div class="text-[0.68rem] font-semibold text-white">Urbano</div>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-users text-white mb-1.5 text-sm" aria-hidden="true"></i>
+                    <div class="text-[0.55rem] text-white/60 uppercase tracking-wider">Ideal para</div>
+                    <div class="text-[0.68rem] font-semibold text-white">Amigos</div>
                 </div>
             </div>
-        </section>
+            </div>
+            
+            <!-- BLOQUE CENTRAL: Título -->
+            <h2 id="destino-zaragoza" class="self-center my-auto text-left font-josefin lg:text-center text-5xl font-bold leading-[.82] tracking-[-.08em] sm:text-7xl lg:text-8xl text-white text-balance">
+                Ciudad por descubrir
+            </h2>
+            
+            <!-- BLOQUE DERECHO: Texto explicativo + Botón -->
+            <div class="max-w-[18rem] text-white/88 text-[0.72rem] font-medium tracking-[0.04em] leading-[1.5] justify-self-start self-start lg:justify-self-end lg:self-end lg:ml-auto lg:mt-24">
+                <p>Descubre Zaragoza entre calles con historia, rincones especiales y buena gastronomía. Una escapada para conocer la ciudad, compartir experiencias y salir de la rutina.</p>
+                
+                <a href="contacto.html#contacto-formulario" class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-naranja text-blanco mt-6 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]">Planear este viaje <i class="ooo-icon-arrow fa-solid fa-chevron-right text-[0.9rem] leading-none" aria-hidden="true"></i></a>
+            </div>
 
-        
+        </div>
+    </section>
+                
         <footer class="global-footer bg-azul text-blanco dark:!bg-[#003879] dark:text-blanco">
             <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
                 <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
