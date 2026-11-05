@@ -59,6 +59,8 @@ function updateThemeUI() {
     themeIcon.classList.toggle('fa-moon', isDark);
   }
 }
+
+
 // Actualiza las imágenes según el tema actual
 function updateThemeImages() {
   const isDark = root.classList.contains('dark');
@@ -212,7 +214,6 @@ if (contactForm && contactMessage) {
 }
 
 
-
 // ANIMACIÓN DE MÁQUINA DE ESCRIBIR PARA NEWSLETTER
 $(function() {
  
@@ -233,8 +234,6 @@ $(function() {
     });
   }
 });
-
-
 
 
 //SIEMPRE AL FINAL
