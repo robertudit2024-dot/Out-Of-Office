@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
       @theme {
@@ -134,225 +135,327 @@
     </div>
 
          </div>
-            <div class="mt-20 grid gap-12 md:grid-cols-[.7fr_1.3fr] md:items-start"></div>
-              <!-- FORMULARIO -->
-              <form id="contacto-formulario" class="grid gap-5" novalidate>
-                  <p class="mb-5 text-[0.78rem] leading-[1.45]">
-                      <span class="font-bold text-amarillo" aria-hidden="true">*</span> Los campos marcados con * son obligatorios.
-                  </p>
 
-                  <div class="grid gap-4 sm:grid-cols-2">
-                      <div class="grid gap-[0.45rem]">
-                          <label for="contact-name" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
-                              Nombre <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
-                          </label>
-                          <input id="contact-name" name="nombre" type="text" autocomplete="name" 
-                          required class="w-full border border-white/55 rounded-none bg-transparent 
-                          px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] outline-none
-                          transition-colors duration-250 focus:border-amarillo focus:ring-2 focus:ring-amarillo/20" />
-                      </div>
 
-                      <div class="grid gap-[0.45rem]"> 
-                          <label for="contact-email" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
-                              Email <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
-                          </label>
-                        <input id="contact-email" name="email" type="email" autocomplete="email" required
-                          class="w-full border border-white/55 rounded-none bg-transparent px-[0.9rem] py-[0.8rem]
-                          text-[0.84rem] text-white leading-[1.4] outline-none transition-colors duration-250 
-                          focus:border-amarillo focus:ring-2 focus:ring-amarillo/20" />
-                      </div>
 
-                      <div class="grid gap-[0.45rem]">
-                          <label for="contact-phone" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">Teléfono</label>
-                          <input id="contact-phone" name="telefono" type="tel" autocomplete="tel" class="w-full border
-                          border-white/55 rounded-none bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem]
-                          text-white leading-[1.4] outline-none transition-colors duration-250 focus:border-amarillo
-                          focus:ring-2 focus:ring-amarillo/20" />
-                      </div>
+         <!-- FORMULARIO -->
 
-                      <div class="grid gap-[0.45rem]">
-                          <label for="contact-destination" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
-                              Destino de interés <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
-                          </label>
-                          <select id="contact-destination" name="destino" required class="w-full border border-white/55
-                            rounded-none bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] 
-                            outline-none transition-colors duration-250 focus:border-amarillo focus:ring-2
-                            focus:ring-amarillo/20 [&>option]:text-black">
-                          
-                            <option value="">Selecciona un destino</option>
-                            <option>Roma</option>
-                            <option>Nueva York</option>
-                            <option>Amsterdam</option>
-                            <option>Londres</option>
-                            <option>Barcelona</option>
-                          </select>
-                      </div>
+         <form id="contacto-formulario" class="grid gap-5" novalidate>
 
-                      <div class="grid gap-[0.45rem]">
-                          <label for="contact-experience" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
-                              Experiencia de interés <span class="font-bold text-amarillo" 
-                              aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
-                          </label>
-                          <select id="contact-experience" name="experiencia" 
-                            required class="w-full border border-white/55 rounded-none
-                            bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem] 
-                            text-white leading-[1.4] outline-none transition-colors
-                            duration-250 focus:border-amarillo focus:ring-2 
-                            focus:ring-amarillo/20 [&>option]:text-black">
+             <p class="mb-5 text-[0.78rem] leading-[1.45]">
 
-                            <option value="">Selecciona una experiencia</option>
-                            <option>Ruta de librerías independientes</option>
-                            <option>Mesa de mercado y cocina de barrio</option>
-                            <option>Sendero al atardecer</option>
-                            <option>Fin de semana entre talleres y cerámica</option>
-                          </select>
-                      </div>
+                 <span class="font-bold text-amarillo" aria-hidden="true">*</span> Los campos marcados con * son obligatorios.
 
-                      <div class="grid gap-[0.45rem]">
-                          <label for="contact-dates" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
-                          Fecha aproximada <span class="font-bold text-amarillo" aria-hidden="true">*</span>
-                          <span class="sr-only"> obligatorio</span>
-                          </label>
-                          <input id="contact-dates" name="fechas" type="date" autocomplete="off" 
-                          required class="w-full border border-white/55 rounded-none bg-transparent
-                          px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] outline-none 
-                          transition-colors duration-250 focus:border-amarillo focus:ring-2 
-                          focus:ring-amarillo/20" />
-                      </div>
+             </p>
 
-                      <div class="grid gap-[0.45rem] sm:col-span-2"> 
-                          <label for="contact-message" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
-                            Mensaje <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
-                          </label>
-                          <textarea id="contact-message" name="mensaje" rows="5" required class="w-full border border-white/55 rounded-none bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] outline-none transition-colors
-                          duration-250 focus:border-amarillo focus:ring-2 focus:ring-amarillo/20"></textarea>
-                      </div> 
-                  </div>
 
-                  <label class="flex items-center gap-2 text-[0.7rem] font-normal normal-case tracking-normal cursor-pointer">
-                    <input type="checkbox" name="privacidad" required class="accent-amarillo h-4 w-4" />
-                    <span>Acepto la política de privacidad. <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span></span>
-                  </label>
-                  <button class="inline-flex items-center justify-between gap-6 min-w-[11rem] 
-                    px-4 py-3.5 border border-transparent bg-black text-white font-sans text-[0.74rem]
-                    font-semibold tracking-[0.02em] uppercase transition-all duration-250 ease-in-out 
-                    hover:-translate-y-1 hover:shadow-lg focus-visible:-translate-y-1 focus-visible:shadow-lg"
-                    type="submit">
-                      Enviar consulta
-                    <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square text-[0.9rem] leading-none" aria-hidden="true"></i>
-                  </button>
 
-                  <p id="contact-form-message" class="min-h-[1.4rem] text-[0.78rem]" role="status"></p>
-              </form>
-            </div>
-         </div>
+             <div class="grid gap-4 sm:grid-cols-2">
+
+                 <div class="grid gap-[0.45rem]">
+
+                     <label for="contact-name" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
+
+                         Nombre <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
+
+                     </label>
+
+                     <input id="contact-name" name="nombre" type="text" autocomplete="name"
+
+                     required class="w-full border border-white/55 rounded-none bg-transparent
+
+                     px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] outline-none
+
+                     transition-colors duration-250 focus:border-amarillo focus:ring-2 focus:ring-amarillo/20" />
+
+                 </div>
+
+
+
+                 <div class="grid gap-[0.45rem]">
+
+                     <label for="contact-email" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
+
+                        Email <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
+
+                    </label>
+
+                  <input id="contact-email" name="email" type="email" placeholder="ejemplo@email.com" required
+
+                    class="w-full border border-white/55 rounded-none bg-transparent px-[0.9rem] py-[0.8rem]
+
+                    text-[0.84rem] text-white leading-[1.4] outline-none transition-colors duration-250
+
+                    focus:border-amarillo focus:ring-2 focus:ring-amarillo/20" />         
+
+
+                 </div>
+
+
+
+                 <div class="grid gap-[0.45rem]">
+
+                     <label for="contact-phone" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">Teléfono</label>
+
+                     <input id="contact-phone" name="telefono" type="tel" autocomplete="tel" class="w-full border
+
+                     border-white/55 rounded-none bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem]
+
+                     text-white leading-[1.4] outline-none transition-colors duration-250 focus:border-amarillo
+
+                     focus:ring-2 focus:ring-amarillo/20" />
+
+                 </div>
+
+
+
+                 <div class="grid gap-[0.45rem]">
+
+                     <label for="contact-destination" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
+
+                         Destino de interés <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span>
+
+                     </label>
+
+                     <select id="contact-destination" name="destino" required class="w-full border border-white/55
+
+                      rounded-none bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4]
+
+                      outline-none transition-colors duration-250 focus:border-amarillo focus:ring-2
+
+                      focus:ring-amarillo/20 [&>option]:text-black">
+
+                     
+
+                      <option value="">Selecciona un destino</option>
+
+                      <option>Roma</option>
+
+                      <option>Nueva York</option>
+
+                      <option>Amsterdam</option>
+
+                      <option>Londres</option>
+
+                      <option>Barcelona</option>
+
+                     </select>
+
+                 </div>
+
+
+
+                 <div class="grid gap-[0.45rem]">
+
+                     <label for="contact-experience" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
+
+                         Experiencia de interés <span class="font-bold text-amarillo"
+
+                         aria-hidden="true"></span><span class="sr-only"> obligatorio</span>
+
+                     </label>
+
+                     <select id="contact-experience" name="experiencia"
+
+                      required class="w-full border border-white/55 rounded-none
+
+                      bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem]
+
+                      text-white leading-[1.4] outline-none transition-colors
+
+                      duration-250 focus:border-amarillo focus:ring-2
+
+                      focus:ring-amarillo/20 [&>option]:text-black">
+
+
+
+                      <option value="">Selecciona una experiencia</option>
+
+                      <option>Ruta de librerías independientes</option>
+
+                      <option>Mesa de mercado y cocina de barrio</option>
+
+                      <option>Sendero al atardecer</option>
+
+                      <option>Fin de semana entre talleres y cerámica</option>
+
+                    </select>
+
+                 </div>
+
+
+
+                 <div class="grid gap-[0.45rem]">
+
+                    <label for="contact-dates" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
+
+                     Fecha aproximada <span class="font-bold text-amarillo" aria-hidden="true">*</span>
+
+                     <span class="sr-only"> obligatorio</span>
+
+                    </label>
+
+                    <input id="contact-dates" name="fechas" type="date" autocomplete="off"
+
+                    required class="w-full border border-white/55 rounded-none bg-transparent
+
+                    px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] outline-none
+
+                    transition-colors duration-250 focus:border-amarillo focus:ring-2
+
+                    focus:ring-amarillo/20" />
+
+                 </div>
+
+
+
+                 <div class="grid gap-[0.45rem] sm:col-span-2">
+
+                    <label for="contact-message" class="text-[0.72rem] font-semibold tracking-[0.04em] uppercase">
+
+                      Mensaje <span class="font-bold text-amarillo" aria-hidden="true"></span><span class="sr-only"> obligatorio</span>
+
+                    </label>
+
+                    <textarea id="contact-message" name="mensaje" rows="5" required class="w-full border border-white/55 rounded-none bg-transparent px-[0.9rem] py-[0.8rem] text-[0.84rem] text-white leading-[1.4] outline-none transition-colors
+
+                     duration-250 focus:border-amarillo focus:ring-2 focus:ring-amarillo/20"></textarea>
+
+                 </div>
+
+             </div>
+
+
+
+             <label class="flex items-center gap-2 text-[0.7rem] font-normal normal-case tracking-normal cursor-pointer">
+
+              <input type="checkbox" name="privacidad" required class="accent-amarillo h-4 w-4" />
+
+              <span>Acepto la política de privacidad. <span class="font-bold text-amarillo" aria-hidden="true">*</span><span class="sr-only"> obligatorio</span></span>
+
+             </label>
+
+             <button class="inline-flex items-center justify-between gap-6 min-w-[11rem]
+
+              px-4 py-3.5 border border-transparent bg-black text-white font-sans text-[0.74rem]
+
+              font-semibold tracking-[0.02em] uppercase transition-all duration-250 ease-in-out
+
+              hover:-translate-y-1 hover:shadow-lg focus-visible:-translate-y-1 focus-visible:shadow-lg"
+
+              type="submit">
+
+                Enviar consulta
+
+               <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square text-[0.9rem] leading-none" aria-hidden="true"></i>
+
+             </button>
+
+
+
+             <p id="contact-form-message" class="min-h-[1.4rem] text-[0.78rem]" role="status"></p>
+
+         </form>
+
+        </div>
+
+    </div>
+
 </main>
-
-
-
-
-
-
 
     <footer class="global-footer bg-azul text-blanco dark:!bg-[#003879] dark:text-blanco">
 
-    <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
 
-    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_.7fr_1fr] icon-white">
 
-    <div>
+      <div>
 
-      <a href="index.html" class="brandmark--inline font-josefin text-4xl font-bold leading-none tracking-[-.08em]">Out Of Office</a>
+        <a href="index.html" class="brandmark--inline font-josefin text-4xl font-bold leading-none tracking-[-.08em]">Out Of Office</a>
 
-      <p class="max-w-xs text-sm">de la oficina al mundo.</p>
+        <p class="max-w-xs text-sm">de la oficina al mundo.</p>
 
-    </div>
+      </div>
 
-    <nav class="footer-navigation flex flex-col gap-4 text-sm font-semibold" aria-label="Navegación del pie de página">
+      <nav class="footer-navigation flex flex-col gap-4 text-sm font-semibold" aria-label="Navegación del pie de página">
 
-      <a href="index.html">Inicio</a>
+        <a href="index.html">Inicio</a>
 
-      <a href="destinos.html">Destinos</a>
+        <a href="destinos.html">Destinos</a>
 
-      <a href="nosotros.html">Nosotros</a>
+        <a href="nosotros.html">Nosotros</a>
 
-      <a href="experiencias.html">Experiencias</a>
+        <a href="experiencias.html">Experiencias</a>
 
-      <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">Contacto</a>
 
-    </nav>
+      </nav>
 
-    <address class="footer-contact not-italic text-sm leading-7">
+      <address class="footer-contact not-italic text-sm leading-7">
 
-      <p><a href="https://maps.google.com/?q=Calle+del+Clavel+5+Centro+28004+Madrid" target="_blank" class="hover:text-amarillo transition-colors underline">Calle del Clavel, 5, Centro, 28004 Madrid</a>
+        <p><a href="https://maps.google.com/?q=Calle+del+Clavel+5+Centro+28004+Madrid" target="_blank" class="hover:text-amarillo transition-colors underline">Calle del Clavel, 5, Centro, 28004 Madrid</a>
+
+        </p>
+
+        <p><a href="tel:+34612345678" class="hover:text-amarillo transition-colors underline">
+
+        +34 612 34 56 78
+
+      </a>
 
       </p>
 
-      <p><a href="tel:+34612345678" class="hover:text-amarillo transition-colors underline">
+        <p><a href="mailto:hola@outofoffice.es" class="hover:text-amarillo transition-colors underline">
 
-      +34 612 34 56 78
+        hola@outofoffice.es
 
-    </a>
+      </a></p>
 
-    </p>
+      </address>
 
-      <p><a href="mailto:hola@outofoffice.es" class="hover:text-amarillo transition-colors underline">
+      </div>
 
-      hola@outofoffice.es
+        <div class="mt-16 flex flex-col gap-6 border-t border-blanco/30 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
 
-    </a></p>
+          <div class="footer-socials flex gap-5 text-base">
 
-    </address>
+            <a  href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
 
-    </div>
+              <i class="fa-brands fa-instagram hover:text-amarillo transition-colors" aria-hidden="true"></i>
 
-   
+              <span class="sr-only">Instagram</span>
 
-    <div class="mt-16 flex flex-col gap-6 border-t border-blanco/30 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+            </a>
 
-      <div class="footer-socials flex gap-5 text-base">
+            <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
 
-        <a  href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-tiktok hover:text-amarillo transition-colors" aria-hidden="true"></i>
 
-          <i class="fa-brands fa-instagram hover:text-amarillo transition-colors" aria-hidden="true"></i>
+              <span class="sr-only">TikTok</span>
 
-          <span class="sr-only">Instagram</span>
+            </a>
 
-        </a>
+            <a href="https://twitter.com/" target="_blank" aria-label="X">
 
-        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+              <i class="fa-brands fa-x-twitter hover:text-amarillo transition-colors" aria-hidden="true"></i>
 
-          <i class="fa-brands fa-tiktok hover:text-amarillo transition-colors" aria-hidden="true"></i>
+              <span class="sr-only">X</span>
 
-          <span class="sr-only">TikTok</span>
+            </a>
 
-        </a>
+        </div>
 
-        <a href="https://twitter.com/" target="_blank" aria-label="X">
+            <p>© 2026 Out Of Office. Todos los derechos reservados.</p>
 
-          <i class="fa-brands fa-x-twitter hover:text-amarillo transition-colors" aria-hidden="true"></i>
+            <p>Legal · Privacidad · Cookies</p>
 
-          <span class="sr-only">X</span>
+        </div>
 
-        </a>
-
-    </div>
-
-        <p>© 2026 Out Of Office. Todos los derechos reservados.</p>
-
-        <p>Legal · Privacidad · Cookies</p>
-
-    </div>
-
-    </div>
+      </div>
 
     </footer>
 
-
-
     <script src="script.js"></script>
-
-
 
   </body>
 

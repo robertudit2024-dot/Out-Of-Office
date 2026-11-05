@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
       @theme {
@@ -30,15 +31,15 @@
   </head>
     <body class="bg-blanco text-negro font-inter transition-colors duration-500 dark:bg-negro dark:text-blanco">
     
-    <header id="global-header" class="global-header--home absolute inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco">
+    <header id="global-header" class="global-header--home fixed inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco">
       <div class="global-header__inner mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
-        <a class="brandmark--stacked font-josefin text-lg font-bold leading-[.8] tracking-[-.08em] text-negro" href="index.html" aria-label="Out Of Office, inicio">Out<br />Of<br />Office</a>
+        <a class="brandmark--stacked font-josefin text-lg font-bold leading-[.8] tracking-[-.08em]" href="index.html" aria-label="Out Of Office, inicio">Out<br />Of<br />Office</a>
         <nav class="global-navigation hidden items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
-          <a class="global-navigation__link text-negro" href="index.html">Inicio</a>
-          <a class="global-navigation__link text-negro" href="destinos.html">Destinos</a>
-          <a class="global-navigation__link text-negro" href="nosotros.html">Nosotros</a>
-          <a class="global-navigation__link text-negro" href="experiencias.html">Experiencias</a>
-          <a class="global-navigation__link text-negro" href="contacto.html">Contacto</a>
+          <a class="global-navigation__link" href="index.html">Inicio</a>
+          <a class="global-navigation__link" href="destinos.html">Destinos</a>
+          <a class="global-navigation__link" href="nosotros.html">Nosotros</a>
+          <a class="global-navigation__link" href="experiencias.html">Experiencias</a>
+          <a class="global-navigation__link" href="contacto.html">Contacto</a>
         </nav>
 
     
@@ -58,13 +59,36 @@
 
     <main>
   <!-- Cita Principal -->
-  <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
-    <blockquote class="mt-8 max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em] text-center">“Un buen viaje no se mide por los kilómetros recorridos, sino por la forma en que vuelves a mirar lo cotidiano.”</blockquote>
-    <p class="mt-8 text-sm text-negro dark:text-naranja">Clara Martín · CEO y fundadora de OutOfOffice</p>
-  </section>
+    <section class="ooo-quote flex min-h-svh flex-col items-center justify-center bg-naranja px-5 py-20 text-center dark:bg-negro lg:px-12">
+  <blockquote class="max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em]">
+    “Un buen viaje no se mide por los kilómetros recorridos, sino por la forma en que vuelves a mirar lo cotidiano.”
+  </blockquote>
+
+  <p class="mt-8 text-sm text-negro dark:text-naranja">
+    Clara Martín · CEO y fundadora de OutOfOffice
+  </p>
+
+
+
+  <a
+    class="ooo-scroll-indicator absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 text-negro dark:text-blanco"
+    href="#history"
+  >
+    <span class="text-[0.65rem] font-semibold uppercase tracking-[0.18em]">
+      Descubre más
+    </span>
+
+    <span class="ooo-scroll-arrows" aria-hidden="true">
+      <i class="fa-solid fa-chevron-down"></i>
+      <i class="fa-solid fa-chevron-down"></i>
+      <i class="fa-solid fa-chevron-down"></i>
+    </span>
+  </a>
+</section>
+
 
   <!-- La Historia -->
-  <section class="bg-amarillo text-negro px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#A96F00] dark:!text-blanco">
+  <section id="history" class="bg-amarillo text-negro px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#A96F00] dark:!text-blanco">
     <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
       <div>
         <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-naranja dark:text-blanco">La historia</p>
@@ -76,7 +100,7 @@
 
   <!-- El Secreto -->
   <section class="bg-azul text-blanco px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!bg-[#003879] dark:!text-blanco">
-    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
       <div>
         <p class="font-sans text-[0.66rem] font-medium uppercase tracking-[0.16em] leading-[1.2] text-amarillo">El secreto</p>
         <h2 class="mt-4 font-josefin text-5xl font-bold leading-[.9] tracking-[-.06em] sm:text-7xl">Escuchar<br />antes de<br /><span class="text-amarillo">recomendar.</span></h2>
