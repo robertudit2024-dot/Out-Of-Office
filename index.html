@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
       @theme {
@@ -30,7 +31,7 @@
   </head>
     <body class="bg-blanco text-negro font-inter transition-colors duration-500 dark:bg-negro dark:text-blanco">
     
-    <header id="global-header" class="global-header--home absolute inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco">
+    <header id="global-header" class="global-header--home fixed inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco transition-all duration-300">
       <div class="global-header__inner mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
         <a class="brandmark--stacked font-josefin text-lg font-bold leading-[.8] tracking-[-.08em]" href="index.html" aria-label="Out Of Office, inicio">Out<br />Of<br />Office</a>
         <nav class="global-navigation hidden items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
@@ -53,9 +54,13 @@
     </header>
     
 
-<main>
+    <main>
       <section id="home-hero" class="home-hero-section relative isolate flex min-h-[100svh] items-end overflow-hidden bg-negro text-blanco">
-        <img class="home-hero-image w-full h-full object-cover object-center absolute inset-0" src="imgs/stefan-stefancik-0wMmxNB6Xzc-unsplash.jpg" alt="Imagen principal del viaje">
+        <img class="ooo-theme-image home-hero-image w-full h-full object-cover object-center absolute inset-0"
+        src="imgs/homepic.webp"
+        data-light-src="imgs/homepic.webp"
+        data-dark-src="imgs/homepic-dark.webp"
+        alt="Imagen principal del viaje">
         <div class="home-hero-overlay bg-gradient-to-b from-black/90 via-black/15 to-black/70 absolute inset-0"></div>
         <div class="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20">
           <div class="max-w-4xl">
