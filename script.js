@@ -160,58 +160,38 @@ $(function () {
   }
 });
 
+//CONTACTO FORM
 
-document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contacto-formulario');
-  const formStatusMessage = document.getElementById('form-status-message');
+$(function () {
+  const $form = $('#contacto-formulario');
+  const $status = $('#form-status-message');
 
-  if (contactForm && formStatusMessage) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault(); // Evita que se recargue la página automáticamente
-      
-      // Comprueba si falta algún campo obligatorio por rellenar
-      if (!contactForm.checkValidity()) {
-        formStatusMessage.textContent = 'Por favor, rellena todos los campos obligatorios correctamente.';
-        formStatusMessage.classList.remove('text-amarillo');
-        formStatusMessage.classList.add('text-red-500', 'font-semibold');
-        return; // Detiene el proceso aquí si hay errores
+  if ($form.length && $status.length) {
+    $form.on('submit', function (e) {
+      e.preventDefault();
+
+
+      if (this.checkValidity()) {
+
+        $status
+          .removeClass('text-red-500 text-naranja')
+          .addClass('text-amarillo font-semibold')
+          .text('¡Se ha enviado tu consulta con éxito!');
+
+
+        this.reset();
+      } else {
+
+        $status
+          .removeClass('text-amarillo')
+          .addClass('text-naranja font-semibold')
+          .text('Por favor, rellena todos los campos obligatorios correctamente.');
+
+        this.reportValidity();
       }
-      
-      // Si todo está correcto, muestra el mensaje de éxito
-      formStatusMessage.textContent = '¡Se ha enviado tu consulta con éxito!';
-      formStatusMessage.classList.remove('text-red-500');
-      formStatusMessage.classList.add('text-amarillo', 'font-semibold');
-      
-      // Limpia el formulario después de enviarlo correctamente
-      contactForm.reset();
     });
   }
 });
-
-
-const contactForm = document.getElementById('contacto-formulario');
-const contactMessage = document.getElementById('contact-form-message');
-
-if (contactForm && contactMessage) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    
-    // Verificamos si todos los campos requeridos son válidos usando la API nativa de validación
-    if (contactForm.checkValidity()) {
-      // Si todo está correcto:
-      contactMessage.textContent = '¡Se ha enviado tu consulta con éxito!';
-      contactMessage.classList.remove('text-red-500', 'text-naranja');
-      contactMessage.classList.add('text-amarillo', 'font-semibold');
-      
-      contactForm.reset();
-    } else {
-      // Si falta algún campo por rellenar o hay un error:
-      contactMessage.textContent = 'Por favor, rellena todos los campos obligatorios correctamente.';
-      contactMessage.classList.remove('text-amarillo');
-      contactMessage.classList.add('text-red-500', 'font-semibold');
-    }
-  });
-}
 
 
 // ANIMACIÓN DE MÁQUINA DE ESCRIBIR PARA NEWSLETTER
