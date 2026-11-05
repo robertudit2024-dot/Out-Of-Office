@@ -36,62 +36,91 @@ const initOutOfOfficeUI = () => {
 
 //DARK LIGHT MODE
 const root = document.documentElement;
-  const themeToggleButton = document.querySelector('#theme-toggle');
-  const themeIcon = document.querySelector('.ooo-icon-theme');
+const themeToggleButton = document.querySelector('#theme-toggle');
+const themeIcon = document.querySelector('.ooo-icon-theme');
 
-  const updateThemeUI = () => {
-    const isDark = root.classList.contains('dark');
-    if (themeToggleButton) {
-      themeToggleButton.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
-      themeToggleButton.setAttribute('aria-pressed', String(isDark));
-    }
-    if (themeIcon) {
-      themeIcon.classList.toggle('fa-sun', !isDark);
-      themeIcon.classList.toggle('fa-moon', isDark);
-    }
-  };
+function updateThemeUI() {
+  const isDark = root.classList.contains('dark');
 
   if (themeToggleButton) {
-    themeToggleButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      root.classList.toggle('dark');
-      updateThemeUI();
-    });
+    themeToggleButton.setAttribute(
+      'aria-label',
+      isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+    );
+
+    themeToggleButton.setAttribute(
+      'aria-pressed',
+      String(isDark)
+    );
   }
 
+  if (themeIcon) {
+    themeIcon.classList.toggle('fa-sun', !isDark);
+    themeIcon.classList.toggle('fa-moon', isDark);
+  }
+}
+// Actualiza las imágenes según el tema actual
+function updateThemeImages() {
+  const isDark = root.classList.contains('dark');
 
-//MAILLLL
-document.addEventListener('DOMContentLoaded', () => {
-  const newsletterForm = document.getElementById('newsletter-form');
-  const newsletterMessage = document.getElementById('form-message');
+  $('.ooo-theme-image').each(function () {
+    const imagePath = isDark
+      ? $(this).attr('data-dark-src')
+      : $(this).attr('data-light-src');
 
-  if (newsletterForm && newsletterMessage) {
-    newsletterForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      
-      const formData = new FormData(newsletterForm);
-      const submittedEmail = formData.get('email');
-    
-      newsletterMessage.classList.remove('hidden');
-      
-      // Validar mail
-      if (!submittedEmail || !/^\S+@\S+\.\S+$/.test(submittedEmail)) {
-        newsletterMessage.textContent = 'Escribe un email válido para entrar al club.';
-        newsletterMessage.style.color = '#EA3303'; // ERROR
-        return;
-      }
-      
-     
-      newsletterMessage.textContent = 'Listo. La próxima pista será para ti.';
-      newsletterMessage.style.color = '#002f1b'; // CORRECTO
-      
-      // Reset forms
-      newsletterForm.reset();
-    });
+    if (imagePath) {
+      $(this).attr('src', imagePath);
+    }
+  });
+}
+
+function applyTheme() {
+  const savedTheme = localStorage.getItem('ooo-theme');
+
+  root.classList.toggle('dark', savedTheme === 'dark');
+
+  updateThemeUI();
+  updateThemeImages();
+}
+
+if (themeToggleButton) {
+  themeToggleButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    root.classList.toggle('dark');
+
+    localStorage.setItem(
+      'ooo-theme',
+      root.classList.contains('dark') ? 'dark' : 'light'
+    );
+
+    updateThemeUI();
+    updateThemeImages();
+  });
+}
+
+applyTheme();
+
+
+//FIN MODOS COLOR
+
+
+
+// HEADER BACKGROUND
+const globalHeader = document.getElementById('global-header');
+
+function updateHeaderBackground() {
+  const scrollPosition = window.scrollY || document.querySelector('main')?.scrollTop || 0;
+  
+  if (scrollPosition > 10) {
+    globalHeader.classList.add('bg-gradient-to-b', 'from-black/50', 'to-transparent', 'backdrop-blur-xs');
   } else {
-    console.warn('No se encontró el formulario');
+    globalHeader.classList.remove('bg-gradient-to-b', 'from-black/50', 'to-transparent', 'backdrop-blur-xs');
   }
-});
+}
+
+window.addEventListener('scroll', updateHeaderBackground);
+document.querySelector('main')?.addEventListener('scroll', updateHeaderBackground);
 
 
 
@@ -173,6 +202,8 @@ if (contactForm && contactMessage) {
     contactForm.reset();
   });
 }
+
+
 
 
 
