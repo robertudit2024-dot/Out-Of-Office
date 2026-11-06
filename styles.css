@@ -3,7 +3,7 @@ width: 2rem;
 height: 2rem;
 place-items: center;
 border: 1px solid currentColor;
-border-radius: 999px;
+border-radius: 25px;
 font-size: 1rem; color: inherit;
 }
 
