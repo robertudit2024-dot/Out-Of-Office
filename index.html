@@ -87,7 +87,7 @@
      <div class="philosophy-list grid gap-0 border-t border-blanco/30">
 
   <!-- 01 -->
-  <article class="grid grid-cols-[2.3rem_minmax(5rem,.55fr)_1fr] items-start gap-2 border-b border-white/30 py-5 sm:grid-cols-[3rem_minmax(7rem,.55fr)_1fr] sm:gap-4 sm:py-[1.4rem]">
+  <article class=" grid grid-cols-[2.3rem_minmax(5rem,.55fr)_1fr] items-start gap-2 border-b border-white/30 py-5 sm:grid-cols-[3rem_minmax(7rem,.55fr)_1fr] sm:gap-4 sm:py-[1.4rem]">
     <span class="font-sans text-[0.7rem] font-medium text-naranja dark:text-amarillo">01</span>
     <h3 class="font-josefin text-[1.1rem] font-semibold tracking-[-.04em]">Original</h3>
     <p class="max-w-[17rem] text-[0.95rem] leading-[1.45] text-white/80">Experiencias reales creadas a mano, sin circuitos masivos.</p>
@@ -129,54 +129,89 @@
     </div>
 
     <!-- Grid de Tarjetas -->
-    <div class="mt-12 grid gap-5 md:grid-cols-3">
+<div class="mt-12 grid gap-5 md:grid-cols-3">
 
-      <!-- Tarjeta 1 -->
-      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] transition-all duration-350 ease-[cubic-bezier(.2,1,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_25px_75px_rgba(0,0,0,0.2)] md:translate-y-0 md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco" data-aos="fade-right" data-aos-duration="1000">
-        <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/asturias1.webp" alt="Imagen de La costa sin nombre">
-        <div class="p-[1.15rem]">
-          <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
-            <span>01 / carretera</span>
-            <span>5 días</span>
-          </div>
-          <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Desconecta en el norte.</h3>
-          <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Asturias · escapada</p>
-          <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] hover:text-naranja" href="experiencias.html#destino-asturias">
-            Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </a>
-        </div>
-      </article>
+  <!-- Tarjeta 1 -->
+  <div data-aos="fade-right" data-aos-duration="1000">
+    <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
 
-      <!-- Tarjeta 2 -->
-      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] transition-all duration-350 ease-[cubic-bezier(.2,1,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_25px_75px_rgba(0,0,0,0.2)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco" data-aos="fade-up" data-aos-duration="1000">
-        <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/Malaga-camnitodelrey1.webp" alt="Imagen de Donde acaba el mapa">
-        <div class="p-[1.15rem]">
-          <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
-            <span>02 / pausa</span>
-            <span>4 días</span>
-          </div>
-          <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Ruta malagueña.</h3>
-          <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Málaga · naturaleza</p>
-          <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] hover:text-naranja" href="experiencias.html#destino-malaga">
-            Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </a>
-        </div>
-      </article>
+      <div class="ooo-img-shine">
+      <img class="ooo-theme-image block aspect-[4/3] w-full object-cover object-center"
+      src="imgs/asturias1.webp"
+      data-light-src="imgs/asturias1.webp"
+      data-dark-src="imgs/asturias_noche.webp"
+      alt="Imagen de La costa sin nombre"
+      />
+      </div>
 
-      <!-- Tarjeta 3 -->
-      <article class="overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] transition-all duration-350 ease-[cubic-bezier(.2,1,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_25px_75px_rgba(0,0,0,0.2)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco" data-aos="fade-left" data-aos-duration="1000">
-        <img class="block aspect-[4/3] w-full object-cover object-center" src="imgs/granada1.webp" alt="Imagen de Mirar al norte">
-        <div class="p-[1.15rem]">
-          <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
-            <span>03 / horizonte</span>
-            <span>3 días</span>
-          </div>
-          <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Encanto andaluz.</h3>
-          <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Granada · cultura</p>
-          <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] hover:text-naranja" href="experiencias.html#destino-granada">
-            Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </a>
+      <div class="p-[1.15rem]">
+        <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
+          <span>01 / carretera</span>
+          <span>5 días</span>
         </div>
+        <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Desconecta en el norte.</h3>
+        <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Asturias · escapada</p>
+        <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja" href="experiencias.html#destino-asturias">
+          Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Tarjeta 2 -->
+  <div data-aos="fade-up" data-aos-duration="1000">
+    <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco">
+      
+      <div class="ooo-img-shine">
+      <img class="ooo-theme-image block aspect-[4/3] w-full object-cover object-center"
+      src="imgs/Malaga-camnitodelrey1.webp"
+      data-light-src="imgs/Malaga-camnitodelrey1.webp"
+      data-dark-src="imgs/malaga_noche.webp"
+      alt="Imagen de Donde acaba el mapa"
+      >
+      </div>
+
+      <div class="p-[1.15rem]">
+        <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
+          <span>02 / pausa</span>
+          <span>4 días</span>
+        </div>
+        <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Ruta malagueña.</h3>
+        <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Málaga · naturaleza</p>
+        <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja" href="experiencias.html#destino-malaga">
+          Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Tarjeta 3 -->
+  <div data-aos="fade-left" data-aos-duration="1000">
+    <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+      
+      <div class="ooo-img-shine">
+      <img class="ooo-theme-image block aspect-[4/3] w-full object-cover object-center"
+      src="imgs/granada1.webp"
+      data-light-src="imgs/granada1.webp"
+      data-dark-src="imgs/granada_noche.webp"
+      alt="Imagen de Mirar al norte">
+      </div>
+
+      <div class="p-[1.15rem]">
+        <div class="flex items-center justify-between text-[0.6rem] font-medium uppercase tracking-[0.06em] text-black/58 dark:text-white/70">
+          <span>03 / horizonte</span>
+          <span>3 días</span>
+        </div>
+        <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Encanto andaluz.</h3>
+        <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Granada · cultura</p>
+        <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja" href="experiencias.html#destino-granada">
+          Ver escapada <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </article>
+  </div>
+
+</div>
       </article>
 
     </div>
@@ -185,13 +220,15 @@
 
 
   
-<section id="home-newsletter" class="h-125 home-newsletter-section bg-verde text-negro dark:!bg-[#A96F00] dark:!text-blanco">
-  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.9fr_1.1fr] lg:items-end lg:px-12 lg:py-24">
+<section id="home-newsletter" class="min-h-125 home-newsletter-section bg-verde text-blanco dark:!bg-[#A96F00] flex items-center">
+  <!-- Cambiado a lg:items-center para centrar verticalmente ambos bloques -->
+  <div class="mx-auto grid max-w-7xl w-full gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-12 lg:py-24">
     <div>
       <p class="font-sans text-[0.66rem] font-bold uppercase tracking-[0.16em] leading-[1.2]">Club Triple O · boletín mensual</p>
-      <h2 class="mt-4 max-w-lg font-josefin text-4xl font-semibold leading-[.9] tracking-[-.06em] sm:text-6xl">
+      
+      <h2 class="mt-4 max-w-lg font-josefin text-4xl font-semibold leading-[.9] tracking-[-.06em] sm:text-6xl min-h-[5rem] sm:min-h-[7.5rem]">
         Entérate <br/>
-        <em class="not-italic text-amarillo">
+        <em class="not-italic text-amarillo inline-block">
           <span id="typed-newsletter"></span>
         </em>
       </h2>
@@ -202,9 +239,9 @@
       <label class="sr-only" for="email">Tu correo electrónico</label>
       
       <div class="flex flex-col gap-2 sm:flex-row">
-        <input id="email" name="email" type="email" autocomplete="email" placeholder="ejemplo@email.com" required class="w-full min-h-[3rem] border border-black/50 rounded-none bg-transparent px-[0.9rem] py-[0.75rem] outline-none font-sans text-[0.78rem] text-negro placeholder:text-black/60 focus:border-negro focus:ring-2 focus:ring-black/12 dark:border-white/50 dark:text-blanco dark:placeholder:text-white/65 dark:focus:border-white dark:focus:ring-white/20" />
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="ejemplo@email.com" required class="w-full min-h-[3rem] border border-blanco rounded-none bg-transparent px-[0.9rem] py-[0.75rem] outline-none font-sans text-[0.78rem] text-blanco placeholder:text-blanco/60 focus:border-blanco focus:ring-2 focus:ring-blanco/12" />
         
-        <button class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-negro text-blanco transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)] dark:bg-blanco dark:text-negro" type="submit">
+        <button class="inline-flex items-center justify-between gap-[1.5rem] min-w-[11rem] px-[1rem] py-[0.85rem] border border-transparent font-sans text-[0.74rem] font-semibold tracking-[0.02em] uppercase bg-blanco text-negro transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,.16)]" type="submit">
           Entrar en el club OOO
           <i class="ooo-icon-arrow fa-solid fa-arrow-up-right-from-square text-[0.9rem] leading-none" aria-hidden="true"></i>
         </button>

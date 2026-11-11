@@ -142,7 +142,7 @@ $(function () {
       if (!submittedEmail || !/^\S+@\S+\.\S+$/.test(submittedEmail)) {
         newsletterMessage
           .text('Escribe un email válido para entrar al club.')
-          .css('color', '#000000');
+          .css('color', '#ffffff');
 
         return;
       }
@@ -184,7 +184,7 @@ $(function () {
 
         $status
           .removeClass('text-amarillo')
-          .addClass('text-naranja font-semibold')
+          .addClass('text-amarillo font-semibold')
           .text('Por favor, rellena todos los campos obligatorios correctamente.');
 
         this.reportValidity();
