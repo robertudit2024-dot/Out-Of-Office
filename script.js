@@ -125,7 +125,7 @@ window.addEventListener('scroll', updateHeaderBackground);
 document.querySelector('main')?.addEventListener('scroll', updateHeaderBackground);
 
 
-
+// NEWSLETTER FORM
 $(function () {
   const newsletterForm = $('#newsletter-form');
   const newsletterMessage = $('#form-message');
@@ -153,10 +153,6 @@ $(function () {
 
       this.reset();
     });
-  } else {
-    console.warn(
-      'No se encontró #newsletter-form o #form-message'
-    );
   }
 });
 
