@@ -37,7 +37,7 @@
     <header id="global-header" class="fixed inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco transition-all duration-300">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
         <a class="font-josefin text-lg font-bold leading-[.8] tracking-[-.08em]" href="index.html" aria-label="Out Of Office, inicio">Out<br>Of<br>Office</a>
-        <nav class="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
+        <nav class="hidden font-josefin  items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
           <a class="global-navigation__link" href="index.html">Inicio</a>
           <a class="global-navigation__link" href="destinos.html">Destinos</a>
           <a class="global-navigation__link" href="nosotros.html">Nosotros</a>
@@ -53,7 +53,7 @@
           </button>
         </div>
       </div>
-      <nav id="mobile-navigation" class="mobile-navigation mobile-navigation--fullscreen" aria-label="Navegación móvil" hidden>
+      <nav id="mobile-navigation" class="uppercase mobile-navigation mobile-navigation--fullscreen" aria-label="Navegación móvil" hidden>
         <a class="block py-[0.7rem] font-josefin text-[1.7rem] tracking-[-.05em] transition-all duration-300 hover:pl-2 hover:text-naranja" href="index.html">Inicio</a>
         <a class="block py-[0.7rem] font-josefin text-[1.7rem] tracking-[-.05em] transition-all duration-300 hover:pl-2 hover:text-naranja" href="destinos.html">Destinos</a>
         <a class="block py-[0.7rem] font-josefin text-[1.7rem] tracking-[-.05em] transition-all duration-300 hover:pl-2 hover:text-naranja" href="nosotros.html">Nosotros</a>
@@ -136,8 +136,8 @@
           <div class="mt-12 grid gap-5 md:grid-cols-3">
 
             <!-- Tarjeta 1 -->
-            <div data-aos="fade-right" data-aos-duration="1000">
-              <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+            <div data-aos="fade-responsive-left" data-aos-duration="1000">
+              <article class="ooo-hover-card relative overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:-rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
                 <div class="ooo-img-shine">
                   <img class="ooo-theme-image block aspect-[4/3] w-full object-cover object-center"
                   src="imgs/asturias1.webp"
@@ -152,7 +152,9 @@
                   </div>
                   <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Desconecta en el norte.</h3>
                   <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Asturias · escapada</p>
-                  <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja" href="experiencias.html#destino-asturias">
+                  
+                  <!-- El enlace ahora usa after:absolute para cubrir toda la tarjeta -->
+                  <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja after:absolute after:inset-0 after:content-['']" href="experiencias.html#destino-asturias">
                     Ver escapada <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                   </a>
                 </div>
@@ -161,7 +163,7 @@
 
             <!-- Tarjeta 2 -->
             <div data-aos="fade-up" data-aos-duration="1000">
-              <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco">
+              <article class="ooo-hover-card relative overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-6 md:rotate-0 dark:border-blanco dark:bg-negro dark:text-blanco">
                 <div class="ooo-img-shine">
                   <img class="ooo-theme-image block aspect-[4/3] w-full object-cover object-center"
                   src="imgs/Malaga-camnitodelrey1.webp"
@@ -176,7 +178,7 @@
                   </div>
                   <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Ruta malagueña.</h3>
                   <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Málaga · naturaleza</p>
-                  <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja" href="experiencias.html#destino-malaga">
+                  <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja after:absolute after:inset-0 after:content-['']" href="experiencias.html#destino-malaga">
                     Ver escapada <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                   </a>
                 </div>
@@ -184,8 +186,8 @@
             </div>
 
             <!-- Tarjeta 3 -->
-            <div data-aos="fade-left" data-aos-duration="1000">
-              <article class="ooo-hover-card overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
+            <div data-aos="fade-responsive" data-aos-duration="1000">
+              <article class="ooo-hover-card relative overflow-hidden rounded-[4px] border border-negro bg-blanco text-negro shadow-[0_20px_50px_rgba(0,0,0,0.20)] md:translate-y-12 md:rotate-1 dark:border-blanco dark:bg-negro dark:text-blanco">
                 <div class="ooo-img-shine">
                   <img class="ooo-theme-image block aspect-[4/3] w-full object-cover object-center"
                   src="imgs/granada1.webp"
@@ -200,7 +202,7 @@
                   </div>
                   <h3 class="mt-[2.5rem] font-josefin text-[1.75rem] font-semibold tracking-[-.06em]">Encanto andaluz.</h3>
                   <p class="mt-[0.2rem] text-[0.8rem] opacity-65">Granada · cultura</p>
-                  <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja" href="experiencias.html#destino-granada">
+                  <a class="mt-[2rem] flex items-center justify-between border-t border-current pt-[0.7rem] text-[0.67rem] font-medium uppercase tracking-[0.05em] transition-colors duration-200 hover:text-naranja after:absolute after:inset-0 after:content-['']" href="experiencias.html#destino-granada">
                     Ver escapada <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                   </a>
                 </div>
