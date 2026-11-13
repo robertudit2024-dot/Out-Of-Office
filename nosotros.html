@@ -28,6 +28,20 @@
         --font-josefin: 'Josefin Sans', sans-serif;
         --font-inter: 'Inter', sans-serif;
       }
+
+      /* Marquesina infinita perfecta sin saltos */
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -37,7 +51,7 @@
     <header id="global-header" class="fixed inset-x-0 top-0 z-30 border-b border-blanco/30 text-blanco transition-all duration-300">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
         <a class="font-josefin text-lg font-bold leading-[.8] tracking-[-.08em]" href="index.html" aria-label="Out Of Office, inicio">Out<br>Of<br>Office</a>
-        <nav class="hidden font-josefin  items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
+        <nav class="hidden font-josefin items-center gap-8 text-xs font-semibold uppercase tracking-[.18em] lg:flex" aria-label="Navegación principal">
           <a class="global-navigation__link" href="index.html">Inicio</a>
           <a class="global-navigation__link" href="destinos.html">Destinos</a>
           <a class="global-navigation__link" href="nosotros.html">Nosotros</a>
@@ -65,8 +79,8 @@
     <main>
       <!-- Cita Principal -->
       <div class="relative flex min-h-svh flex-col items-center justify-center bg-naranja px-5 py-20 text-center dark:bg-negro lg:px-12">
-        <blockquote class="max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em] text-blanco">
-          “Un buen viaje no se mide por los kilómetros recorridos, sino por la forma en que vuelves a mirar lo cotidiano.”
+        <blockquote id="typed-nosotros" class="max-w-5xl font-josefin text-5xl font-semibold leading-[.93] tracking-[-.06em] text-blanco">
+          
         </blockquote>
 
         <p class="mt-8 text-sm text-blanco dark:text-naranja">
@@ -96,8 +110,72 @@
         </div>
       </section>
 
+      <!-- CREENCIAS -->
+      <section class="bg-blanco text-azul px-5 py-24 sm:px-8 lg:px-12 lg:py-32 border-y border-black/10 dark:bg-negro dark:text-blanco">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-xl mb-16">
+            <h2 class="mt-4 font-josefin text-5xl font-bold leading-[.92] tracking-[-.06em] lg:text-7xl">Cooosas en las que creemos firmemente&hellip;</h2>
+          </div>
+
+          <!-- Cuadrícula asimétrica estilo notas de cuaderno -->
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Nota 01 -->
+            <article class="rounded-[4px] border border-negro dark:border-white p-8 flex flex-col justify-between bg-blanco dark:bg-negro transition-transform duration-300 hover:-translate-y-1 md:-rotate-1" data-aos="fade-up" data-aos-delay="0">
+              <div>
+                <span class="text-[0.72rem] font-bold font-mono uppercase tracking-widest text-naranja">&#35;01</span>
+                <p class="text-negro dark:text-blanco mt-6 font-josefin text-2xl font-semibold leading-snug tracking-[-.03em]">
+                  “Si en tus vacaciones necesitas un cronómetro, no estás viajando; estás fichando en otra oficina.”
+                </p>
+              </div>
+              <div class="text-negro dark:text-blanco mt-12 pt-4 border-t-1 border-current text-[0.7rem] uppercase tracking-wider">
+                Anti-prisas
+              </div>
+            </article>
+
+            <!-- Nota 02 -->
+            <article class="rounded-[4px] border border-negro dark:border-white p-8 flex flex-col justify-between bg-blanco dark:bg-negro transition-transform duration-300 hover:-translate-y-1 md:rotate-1" data-aos="fade-up" data-aos-delay="100">
+              <div>
+                <span class="text-[0.72rem] font-bold font-mono uppercase tracking-widest text-naranja">&#35;02</span>
+                <p class="text-negro dark:text-blanco mt-6 font-josefin text-2xl font-semibold leading-snug tracking-[-.03em]">
+                  “El mejor GPS de la historia sigue siendo equivocarse de calle y acabar en una plaza que no venía en el mapa.”
+                </p>
+              </div>
+              <div class="text-negro dark:text-blanco mt-12 pt-4 border-t-1 border-current text-[0.7rem] uppercase tracking-wider">
+                Improvisación
+              </div>
+            </article>
+
+            <!-- Nota 03 -->
+            <article class="rounded-[4px] border border-negro dark:border-white p-8 flex flex-col justify-between bg-blanco dark:bg-negro transition-transform duration-300 hover:-translate-y-1 md:-rotate-1" data-aos="fade-up" data-aos-delay="200">
+              <div>
+                <span class="text-[0.72rem] font-bold font-mono uppercase tracking-widest text-naranja">&#35;03</span>
+                <p class="text-negro dark:text-blanco mt-6 font-josefin text-2xl font-semibold leading-snug tracking-[-.03em]">
+                  “No hay peor souvenir que un itinerario de 40 sitios en tres días con los pies destrozados.”
+                </p>
+              </div>
+              <div class="text-negro dark:text-blanco mt-12 pt-4 border-t-1 border-current text-[0.7rem] uppercase tracking-wider">
+                Criterio
+              </div>
+            </article>
+
+            <!-- Nota 04 -->
+            <article class="rounded-[4px] border border-negro dark:border-white p-8 flex flex-col justify-between bg-blanco dark:bg-negro transition-transform duration-300 hover:-translate-y-1 md:rotate-1" data-aos="fade-up" data-aos-delay="300">
+              <div>
+                <span class="text-[0.72rem] font-bold font-mono uppercase tracking-widest text-naranja">&#35;04</span>
+                <p class="text-negro dark:text-blanco mt-6 font-josefin text-2xl font-semibold leading-snug tracking-[-.03em]">
+                  “Menos checklists. Más sobremesas que no sabes a qué hora terminan.”
+                </p>
+              </div>
+              <div class="text-negro dark:text-blanco mt-12 pt-4 border-t-1 border-current text-[0.7rem] uppercase tracking-wider">
+                Esencia
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- El Secreto -->
-      <section class="bg-verde text-blanco px-5 py-20 sm:px-8 lg:px-12 lg:py-28 dark:!text-blanco">
+      <section class="bg-verde dark:bg-verde-osc text-blanco px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <p class="font-sans text-[0.66rem] font-bold uppercase tracking-[0.16em] leading-[1.2] text-amarillo">El secreto</p>
@@ -115,19 +193,19 @@
           
           <div class="mt-10 flex flex-col border-t border-black/30 dark:border-white/30 md:grid md:grid-cols-3 md:gap-8">
             <article class="flex flex-col items-center gap-3 border-b border-black/30 dark:border-white/30 py-8 md:items-start md:py-6">
-              <span class="text-naranja font-semibold text-[0.72rem]">01</span>
+              <span class="text-naranja font-semibold text-[0.72rem]">&#35;01</span>
               <h3 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Original</h3>
               <p class="max-w-[18rem] text-[0.95rem] leading-relaxed opacity-80">Experiencias reales creadas a mano, sin circuitos masivos.</p>
             </article>
 
             <article class="flex flex-col items-center gap-3 border-b border-black/30 dark:border-white/30 py-8 md:items-start md:py-6">
-              <span class="text-naranja font-semibold text-[0.72rem]">02</span>
+              <span class="text-naranja font-semibold text-[0.72rem]">&#35;02</span>
               <h3 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Origen</h3>
               <p class="max-w-[18rem] text-[0.95rem] leading-relaxed opacity-80">Salir del punto de partida sin perder la esencia.</p>
             </article>
 
             <article class="flex flex-col items-center gap-3 border-b border-black/30 dark:border-white/30 py-8 md:items-start md:py-6">
-              <span class="text-naranja font-semibold text-[0.72rem]">03</span>
+              <span class="text-naranja font-semibold text-[0.72rem]">&#35;03</span>
               <h3 class="font-josefin text-2xl font-semibold tracking-[-.06em]">Objetivo</h3>
               <p class="max-w-[18rem] text-[0.95rem] leading-relaxed opacity-80">Hacer del mundo tu próximo destino sin filtros.</p>
             </article>
@@ -185,6 +263,7 @@
         once: true
       });
     </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
