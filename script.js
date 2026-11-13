@@ -211,6 +211,22 @@ $(function() {
   }
 });
 
+// ANIMACIÓN DE MÁQUINA DE ESCRIBIR PARA NOSOTROS
+$(function() {
+ 
+  if ($('#typed-nosotros').length) {
+    new Typed('#typed-nosotros', {
+      strings: [
+        '"Un buen viaje no se mide por los kilómetros recorridos, sino por la forma en que vuelves a mirar lo cotidiano."'
+      ],
+      typeSpeed: 45,
+      startDelay: 100,
+      loop: false,
+      showCursor: false,
+    });
+  }
+});
+
 
 //SIEMPRE AL FINAL
 if (document.readyState === 'loading') {
